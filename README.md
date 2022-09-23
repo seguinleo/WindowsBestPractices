@@ -1,6 +1,6 @@
 # Optimize Windows
 
-[en](./), [fr](./fr.md)
+[en](/README.md), [fr](/README-FR.md)
 
 Hello! Here are simple and healthy optimizations for a PC running Windows 10 and 11. These manipulations allow you to have a more fluid and efficient computer for office automation, video montage or video games. These manipulations are without risk and can solve the slowness and crashes of your PC. Your computer will also be able to boot faster and launch tasks faster. These optimizations are not "magical", I do not promise an incredible gain, the main optimization is to buy more efficient components. Read everything before doing anything.
 
