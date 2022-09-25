@@ -20,12 +20,12 @@ Dans l'ordre, à répéter 1 fois par mois environ :
 
 Une fois que tout est bien à jour et que le PC a été redémarré :
 * Supprimer les fichiers de Windows Update **après chaque mise à jour** (C:/Windows/SoftwareDistribution/Download/ - Supprimer tous les dossiers pour éviter des erreurs lors des prochaines mises à jour)
-* Supprimer tous les fichiers temporaires (`Windows` + `R` - Taper %temp% - Tout supprimer)
+* Supprimer tous les fichiers temporaires (`Windows` + `R` - Taper "%temp%" - Tout supprimer)
 * Réparer les fichiers système : `sfc /scannow`
 * Vider le cache DNS : `ipconfig /flushdns`
 * Réparer l’image de Windows : `Dism /Online /Cleanup-Image /RestoreHealth`
 * Réinitialiser le cache des icônes avec mon [script](https://github.com/PouletEnSlip/ResetIconCache)
-* Nettoyer tous les lecteurs (Clic droit sur un lecteur - Propriétés - Nettoyage - Nettoyer les fichiers système - Tout cocher)
+* Nettoyer tous les lecteurs (Taper "Nettoyage de disque" dans la barre de recherche Windows - Exécuter en tant qu'administrateur - Tout cocher)
 * Optimiser tous les lecteurs (Clic droit sur un lecteur - Propriétés - Outils - Optimiser)
 
 Pensez à éteindre votre ordinateur la nuit, ne le mettez pas en veille pour prévenir les bugs. Nettoyer aussi régulièrement votre PC de la poussière pour éviter aux composants de trop chauffer et donc de perdre des performances.
@@ -81,4 +81,4 @@ Voilà ! Votre PC devrait être plus rapide et performant. Je recommande une ré
 ### Sources
 [Discord Entraide Informatique](https://discord.gg/WMsR7dT) | [Piwi](https://github.com/Piwielle) | [BlurBusters](https://blurbusters.com/) | [PrivacyGuides](https://privacyguides.org/)
 
-*Mise à jour : 23/09/2022*
+*Mise à jour : 25/09/2022*
