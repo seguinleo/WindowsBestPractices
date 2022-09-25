@@ -20,12 +20,12 @@ In order, to be repeated approximately once a month:
 
 Once everything is up to date and the PC has been restarted:
 * Delete Windows Update files after each update (C:/Windows/SoftwareDistribution/Download/ - Delete all folders to avoid errors in future updates)
-* Delete all temporary files (`Windows` + `R` - Type %temp% - Delete all)
+* Delete all temporary files (`Windows` + `R` - Type "%temp%" - Delete all)
 * Repair system files: `sfc /scannow`
 * Flush DNS cache: `ipconfig /flushdns`
 * Repair Windows Image: `Dism /Online /Cleanup-Image /RestoreHealth`
 * Reset icon cache with my [script](https://github.com/PouletEnSlip/ResetIconCache)
-* Clean all drives (Right click on a drive - Properties - Cleanup - Clean up system files - Check all)
+* Clean all drives (Type "Disk Cleanup" in the Windows search bar - Run as administrator - Check all)
 * Optimize all drives (Right click on a drive - Properties - Tools - Optimize)
 
 Remember to turn off your computer at night, do not put it to sleep to prevent bugs. Also regularly clean your PC of dust to prevent components from overheating and therefore losing performance.
@@ -81,4 +81,4 @@ That's it! Your PC should be faster and more efficient. I recommend reinstalling
 ### Sources
 [Discord Entraide Informatique](https://discord.gg/WMsR7dT) | [Piwi](https://github.com/Piwielle) | [BlurBusters](https://blurbusters.com/) | [PrivacyGuides](https://privacyguides.org/)
 
-*Update : 23/09/2022*
+*Update : 25/09/2022*
