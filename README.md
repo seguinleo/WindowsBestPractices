@@ -2,7 +2,7 @@
 
 [en](/README.md), [fr](/README-FR.md)
 
-Hello! Here are simple and healthy optimizations for a PC running Windows 10 and 11. These manipulations allow you to have a more fluid and efficient computer for office automation, video montage or video games. These manipulations are without risk and can solve the slowness and crashes of your PC. Your computer will also be able to boot faster and launch tasks faster. These optimizations are not "magical", I do not promise an incredible gain, the main optimization is to buy more efficient components. Read everything before doing anything.
+Hello! Here are simple and healthy optimizations for a PC running Windows 10 and 11. These manipulations allow you to have a more fluid and efficient computer for office automation, video montage or video games. These manipulations are without risk and can solve the slowness and crashes of your PC. Your computer will also be able to boot faster and launch tasks faster. These optimizations are not "magic", I do not promise an incredible gain, the main optimization is to buy more efficient components. Read everything before doing anything.
 
 ## Table of contents
 - [Quick optimizations](#quick-optimizations)
@@ -45,7 +45,7 @@ Disable hibernation to free up space (~3GB) and make the PC shut down completely
 
 Reduce CPU resources reserved for certain Windows processes: `REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Multimedia\SystemProfile" /v SystemResponsiveness /t REG_DWORD /d 00000010 /f` - Restart PC | To cancel: `REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Multimedia\SystemProfile" /v SystemResponsiveness /t REG_DWORD /d 00000020 /f`
 
-Uncheck all the boxes on each tab of the “Privacy” section in Windows settings to limit the collection of personal data by Microsoft (location, contacts, etc.)
+Uncheck all the boxes on each tab of the "Privacy" section in Windows settings to limit the collection of personal data by Microsoft (location, contacts, etc.)
 
 Install **all** versions of [Visual C++](https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/) to avoid missing DLL errors
 
@@ -55,11 +55,11 @@ Disable Bing results in Windows Search: `REG ADD "HKEY_CURRENT_USER\SOFTWARE\Pol
 
 Bring old Windows 10 context menu back on Windows 11: `REG ADD "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve` - Restart PC | To cancel: `REG DELETE "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f`
 
-Disable “Sysmain” and “Windows Search” services if Windows is installed on an SSD (`Windows` + `R` - Type "services.msc")
+Disable "Sysmain" and "Windows Search" services if Windows is installed on an SSD (`Windows` + `R` - Type "services.msc")
 
-**Change power options in Control Panel:** Intel CPU → choose “High Performance” | AMD Ryzen 1000, 2000, 3000 and 4000 CPUs → choose “AMD Ryzen Balanced” | AMD Ryzen 5000 CPU → choose “Balanced”. In advanced settings: stop hard drive after 0min (never) and disable USB selective suspend
+**Change power options in Control Panel:** Intel CPU → choose "High Performance" | AMD Ryzen 1000, 2000, 3000 and 4000 CPUs → choose "AMD Ryzen Balanced" | AMD Ryzen 5000+ CPU → choose “Balanced”. In advanced settings: stop hard drive after 0min (never) and disable USB selective suspend
 
-**Nvidia control panel changes (similar AMD options):** select “Use the advanced 3D image settings”, low latency mode to “On”, prefer maximum performance, enable G-SYNC + V-SYNC + limit FPS to 2 below screen refresh rate to avoid frame tearing (144Hz screen → limit to 142FPS). If you enable V-SYNC in the Nvidia panel, you have to disable it in the game settings. Choose full dynamic range and choose 10bpc (or more) if possible. These settings are best for someone looking for the best possible image quality with negligible impact on latency
+**Nvidia control panel changes (similar AMD options):** select "Use the advanced 3D image settings", low latency mode to "On", prefer maximum performance, enable G-SYNC + V-SYNC + limit FPS to 2 below screen refresh rate to avoid frame tearing (144Hz screen → limit to 142FPS). If you enable V-SYNC in the Nvidia panel, you have to disable it in the game settings. Choose full dynamic range and choose 10bpc (or more) if possible. These settings are best for someone looking for the best possible image quality with negligible impact on latency
 
 **Overclock your graphic card (Nvidia and AMD):** overclocking allows you to increase the clock frequency of the graphics card and thus have more performance in the game. However, the temperature of the card may increase. Personally I use [Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) and [Kombustor](https://msikombustor.com/). I like Kombustor because it allows to scan the number of artifacts (you have to check the box on the menu and choose your native resolution). Indeed, an overclock can be stable on Unigine Heaven but the computer can crash on a more resource-intensive game. I consider that an overclock is stable if the temperature of the card does not exceed 85°C (185°F) and Kombustor does not detect any artifact in 10 minutes
 
