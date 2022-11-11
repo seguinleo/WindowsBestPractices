@@ -73,6 +73,7 @@ Disable "Sysmain" and "Windows Search" services if Windows is installed on an SS
 * Use [Hat.sh](https://hat.sh/) to encrypt your sensitive documents/archives with a password
 * If you want a free VPN, [ProtonVPN](https://protonvpn.com/download) is the best choice. Avoid all other free VPNs that can sell your personal data
 * Use [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) to control all your RGB components through a single software. Thus, we avoid software like Razer Synapse or Dragon Center which use a lot of resources in the background
+* Calibrate the contrast and colors of your monitor with [Lagom](http://www.lagom.nl/lcd-test/)
 * Install [EqualizerAPO](https://sourceforge.net/projects/equalizerapo/) to improve sound rendering, boost bass and treble. You have to choose SFX/EFX during the installation. If you update your sound card drivers, you will have to reconfigure EqualizerAPO. This software has almost no performance impact
 
 ## Conclusion
@@ -81,4 +82,4 @@ That's it! Your PC should be faster and more efficient. I recommend reinstalling
 ### Sources
 [Discord Entraide Informatique](https://discord.gg/WMsR7dT) | [Piwi](https://github.com/Piwielle) | [BlurBusters](https://blurbusters.com/) | [PrivacyGuides](https://privacyguides.org/)
 
-*Update : 25/09/2022*
+*Update : 11/11/2022*
