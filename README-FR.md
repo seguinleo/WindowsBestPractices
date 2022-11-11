@@ -73,6 +73,7 @@ Désactiver les services "Sysmain" et "Windows Search" si Windows est installé 
 * Utiliser [Hat.sh](https://hat.sh/) pour chiffrer vos documents/archives sensibles avec un mot de passe
 * Si vous souhaitez un VPN gratuit, [ProtonVPN](https://protonvpn.com/download) est le meilleur choix. Evitez tous les autres VPN gratuits qui peuvent vendre vos données personnelles
 * Utiliser [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) pour contrôler tous vos composants RGB via un seul logiciel. Ainsi, on évite les logiciels comme Razer Synapse ou Dragon Center qui consomment énormément de ressources en arrière-plan
+* Calibrer le contraste et les couleurs de votre écran avec [Lagom](http://www.lagom.nl/lcd-test/)
 * Installer [EqualizerAPO](https://sourceforge.net/projects/equalizerapo/) pour améliorer le rendu sonore, booster les basses et les aigus. Il faut choisir SFX/EFX lors de l'installation. En cas de mise à jour des drivers de la carte son, il faudra reconfigurer EqualizerAPO. Ce logiciel n'a quasiment aucun impact sur les performances
 
 ## Conclusion
@@ -81,4 +82,4 @@ Voilà ! Votre PC devrait être plus rapide et performant. Je recommande une ré
 ### Sources
 [Discord Entraide Informatique](https://discord.gg/WMsR7dT) | [Piwi](https://github.com/Piwielle) | [BlurBusters](https://blurbusters.com/) | [PrivacyGuides](https://privacyguides.org/)
 
-*Mise à jour : 25/09/2022*
+*Mise à jour : 11/11/2022*
