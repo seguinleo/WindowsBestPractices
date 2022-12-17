@@ -10,8 +10,8 @@ Bonjour ! Voici des optimisations simples et saines pour un ordinateur fonctionn
 - [Optionnel](#optionnel)
 - [Conclusion](#conclusion)
 
-## Optimisations rapides (à répéter 1 fois par mois environ)
-Dans l'ordre :
+## Optimisations rapides
+Dans l'ordre, à répéter 1 fois par mois environ :
 * Vérifier que vous n'avez pas de virus/malware avec [Malwarebytes](https://fr.malwarebytes.com/)
 * Supprimer l'historique, le cache et les cookies du navigateur
 * Mettre le BIOS et les drivers à jour **via le site de votre carte mère**. Évitez CCleaner, Driverscloud, DriverBooster... ces utilitaires peuvent installer des drivers obsolètes ou non compatibles avec vos composants
@@ -30,7 +30,7 @@ Une fois que tout est bien à jour et que l'ordinateur a été redémarré :
 
 Pensez à éteindre votre ordinateur la nuit, ne le mettez pas en veille pour prévenir les bugs. Nettoyer aussi régulièrement votre PC de la poussière pour éviter aux composants de trop chauffer et donc de perdre des performances.
 
-## Optimisations avancées (permanentes)
+## Optimisations avancées
 Désinstaller un maximum d'applications Windows et logiciels que vous n'utilisez pas (Menu démarrer - Clic droit sur un programme - Désinstaller)
 
 Désactiver un maximum de programmes qui se lancent au démarrage de Windows (`Ctrl` + `Maj` + `Esc` - Démarrage)
