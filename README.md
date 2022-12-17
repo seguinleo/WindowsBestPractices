@@ -10,8 +10,8 @@ Hello! Here are simple and healthy optimizations for a PC running Windows 10 and
 - [Optional](#optional)
 - [Conclusion](#conclusion)
 
-## Quick optimizations (to be repeated approximately once a month)
-In order:
+## Quick optimizations
+In order, to be repeated approximately once a month:
 * Check for viruses/malware with [Malwarebytes](https://malwarebytes.com/)
 * Delete browser history, cache and cookies
 * Update the BIOS and drivers **via your motherboard's website**. Avoid CCleaner, Driverscloud, DriverBooster… these utilities may install outdated or non-compatible drivers with your components
@@ -30,7 +30,7 @@ Once everything is up to date and the PC has been restarted:
 
 Remember to turn off your computer at night, do not put it to sleep to prevent bugs. Also regularly clean your PC of dust to prevent components from overheating and therefore losing performance.
 
-## Advanced optimizations (permanent)
+## Advanced optimizations
 Uninstall as many Windows applications and software as possible that you don't use (Start menu - Right click on a program - Uninstall)
 
 Disable as many programs as possible that launch at Windows startup (`Ctrl` + `Maj` + `Esc` - Startup)
