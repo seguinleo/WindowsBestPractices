@@ -73,7 +73,8 @@ Disable "Sysmain" and "Windows Search" services if Windows is installed on an SS
 ## Optional
 * Reinstall Windows completely (with a USB key) before applying these optimizations to start on a clean system
 * Prefer [Firefox](https://www.mozilla.org/en-US/firefox/new/) or [Brave](https://brave.com/) to Chrome for privacy, learn more [here](https://privacytests.org/)
-* [uBlock Origin](https://ublockorigin.com) extension recommended for blocking ads and trackers, I advise against other ad blockers which would be less effective, learn more [here](https://adblock-tester.com/)
+* [uBlock Origin](https://ublockorigin.com/) extension recommended for blocking ads and trackers, I advise against other ad blockers which would be less effective, learn more [here](https://adblock-tester.com/)
+* Use a custom DNS like [Quad9](https://www.quad9.net) or [Mullvad](https://mullvad.net/fr/help/dns-over-https-and-dns- over-tls/) rather than the local provider one for more security and privacy
 * Enable Bitlocker on the Pro version of Windows to encrypt drive data and secure your files (Right click on a drive - Enable Bitlocker). It is possible to activate Bitlocker on the Home version of Windows, under certain conditions
 * Install [7-Zip](https://www.7-zip.org/) to compress files and be able to encrypt archives. I do not recommend WinRAR which is not open source
 * Use [Hat.sh](https://hat.sh/) to encrypt your sensitive documents with a password
@@ -84,4 +85,4 @@ Disable "Sysmain" and "Windows Search" services if Windows is installed on an SS
 That's it! Your PC should be faster and more efficient. I recommend reinstalling Windows every year, taking care to make backups. I advise against other manipulations coming from other sites which could damage the system (custom ISO, PowerShell scripts, Internet connection optimizer... these are scams).
 
 ### Sources
-[Discord Entraide Informatique](https://discord.gg/WMsR7dT) | [Piwi](https://github.com/Piwielle) | [BlurBusters](https://blurbusters.com/) | [PrivacyGuides](https://privacyguides.org/)
+[Discord Entraide Informatique](https://discord.gg/WMsR7dT) | [Piwi](https://github.com/Piwielle) | [BlurBusters](https://blurbusters.com) | [PrivacyGuides](https://privacyguides.org/)
