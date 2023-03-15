@@ -72,7 +72,7 @@ Désactiver les services "Sysmain" et "Windows Search" si Windows est installé 
 
 ## Optionnel
 * Réinstaller Windows complètement (avec une clé USB) avant d’appliquer ces optimisations pour partir sur une base saine
-* Préférer [Firefox](https://www.mozilla.org/fr/firefox/new/) ou [Brave](https://brave.com/fr/) à Chrome pour le respect de la vie privée, plus d'info [ici](https://privacytests.org/)
+* Préférer [Firefox](https://www.mozilla.org/fr/firefox/new/) ou [Chromium](https://www.chromium.org/chromium-projects/) à Google Chrome pour le respect de la vie privée, plus d'info [ici](https://privacytests.org/)
 * Extension [uBlock Origin](https://ublockorigin.com/fr) recommandée pour le blocage des publicités et pisteurs, je déconseille d'autres bloqueurs qui seraient moins efficaces, plus d'info [ici](https://adblock-tester.com/)
 * Utiliser un DNS personnalisé comme [Quad9](https://www.quad9.net/fr/) ou [Mullvad](https://mullvad.net/fr/help/dns-over-https-and-dns-over-tls/) plutôt que celui du fournisseur local pour plus de sécurité et de vie privée
 * Activer Bitlocker sur la version Pro de Windows pour chiffrer les données du lecteur et sécuriser vos fichiers (Clic droit sur un lecteur - Activer Bitlocker). Il est possible d'activer Bitlocker sur la version Famille de Windows, à certaines conditions, tuto disponible [ici](https://lecrabeinfo.net/activer-le-chiffrement-de-lappareil-bitlocker-sur-windows-10-famille.html)
