@@ -72,7 +72,7 @@ Disable "Sysmain" and "Windows Search" services if Windows is installed on an SS
 
 ## Optional
 * Reinstall Windows completely (with a USB key) before applying these optimizations to start on a clean system
-* Prefer [Firefox](https://www.mozilla.org/en-US/firefox/new/) or [Brave](https://brave.com/) to Chrome for privacy, learn more [here](https://privacytests.org/)
+* Prefer [Firefox](https://www.mozilla.org/en-US/firefox/new/) or stock [Chromium](https://www.chromium.org/chromium-projects/) to Google Chrome for privacy, learn more [here](https://privacytests.org/)
 * [uBlock Origin](https://ublockorigin.com/) extension recommended for blocking ads and trackers, I advise against other ad blockers which would be less effective, learn more [here](https://adblock-tester.com/)
 * Use a custom DNS like [Quad9](https://www.quad9.net) or [Mullvad](https://mullvad.net/fr/help/dns-over-https-and-dns-over-tls/) rather than the local provider one for more security and privacy
 * Enable Bitlocker on the Pro version of Windows to encrypt drive data and secure your files (Right click on a drive - Enable Bitlocker). It is possible to activate Bitlocker on the Home version of Windows, under certain conditions
