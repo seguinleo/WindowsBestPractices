@@ -4,7 +4,7 @@
 
 [en](/README.md), [fr](/README-FR.md)
 
-Hello! Here are simple and healthy optimizations for a PC running Windows 10 and 11. These manipulations allow you to have a more powerful PC for office and video games. These manipulations are without risk and can solve the slowness and crashes of your PC. These optimizations are not "magical", I do not promise an incredible gain, the most effective being to buy new components. Read everything before doing anything.
+Hello! Here are simple and healthy optimizations for a PC running Windows 10 and 11. These manipulations allow you to have a more powerful PC for office and video games. These manipulations are without risk and can solve the slowness and crashes of your PC. These optimizations are not "magic", I do not promise an incredible gain, the most effective being to buy new components. Read everything before doing anything.
 
 ## Table of contents
 - [Quick optimizations](#quick-optimizations)
