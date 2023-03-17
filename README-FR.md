@@ -75,10 +75,10 @@ Remettre l'ancien menu du clic droit de Windows 10 sur Windows 11 : `REG ADD "HK
 * Réinstaller Windows (Pro de préférence) complètement (avec une clé USB) avant d’appliquer ces optimisations pour partir sur une base saine
 * Toujours garder Windows et ses programmes à jour pour des raisons de sécurité, de stabilité et de compatibilité
 * Utiliser l'antivirus de Windows qui fait très bien son travail. Éviter Avast, Bitdefender...
-* Installer l'extension [uBlock Origin](https://ublockorigin.com/fr) pour le blocage des publicités et pisteurs, éviter d'installer d'autres extensions qui pourraient ralentir le navigateur
+* Installer l'extension [uBlock Origin](https://ublockorigin.com/) pour le blocage des publicités et pisteurs, éviter d'installer d'autres extensions qui pourraient ralentir le navigateur
 * Configurer votre navigateur pour bloquer les cookies tiers et utiliser HTTPS uniquement
 * Utiliser un DNS personnalisé (DoH, dans les paramètres Windows) comme [Quad9](https://www.quad9.net/fr/) ou [Mullvad](https://mullvad.net/fr/help/dns-over-https-and-dns-over-tls/) plutôt que celui du fournisseur local pour plus de sécurité et de vie privée
-* Activer Bitlocker avec TPM 2.0 sur la version Pro de Windows pour chiffrer les données du lecteur et sécuriser vos fichiers (Clic droit sur un lecteur - Activer Bitlocker)
+* Activer BitLocker avec TPM 2.0 sur Windows Pro pour chiffrer les données du lecteur et sécuriser vos fichiers (Clic droit sur un lecteur - Activer BitLocker)
 > **Warning** Veuillez à bien sauvegarder la clé de récupération BitLocker dans un cloud ou un disque externe !
 * Utiliser [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) pour contrôler tous vos composants RGB via un seul logiciel. Ainsi, on évite les logiciels comme Razer Synapse ou MSI Dragon Center qui consomment énormément de ressources en arrière-plan
 

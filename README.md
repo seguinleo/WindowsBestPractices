@@ -75,10 +75,10 @@ Bring old Windows 10 context menu back on Windows 11: `REG ADD "HKCU\Software\Cl
 * Reinstall Windows (preferably Pro) completely (with a USB key) before applying these optimizations to start on a clean system
 * Always keep Windows and its programs up-to-date for security, stability and compatibility reasons
 * Use the Windows antivirus which does its job very well. Avoid Avast, Bitdefender...
-* Install the extension [uBlock Origin](https://ublockorigin.com/fr) for blocking ads and trackers, avoid installing other extensions that could slow down the browser
+* Install the extension [uBlock Origin](https://ublockorigin.com/) for blocking ads and trackers, avoid installing other extensions that could slow down the browser
 * Configure your browser to block third-party cookies and use HTTPS only
 * Use a custom DNS (DoH, in Windows settings) like [Quad9](https://www.quad9.net) or [Mullvad](https://mullvad.net/fr/help/dns-over-https-and-dns-over-tls/) rather than the local provider one for more security and privacy
-* Enable Bitlocker with TPM 2.0 on the Pro version of Windows to encrypt drive data and secure your files (Right click on a drive - Enable Bitlocker)
+* Enable BitLocker with TPM 2.0 on Windows Pro to encrypt drive data and secure your files (Right click on a drive - Enable BitLocker)
 > **Warning** Be sure to back up the BitLocker recovery key to a cloud or external drive!
 * Use [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) to control all your RGB components through a single software. Thus, we avoid software like Razer Synapse or MSI Dragon Center which use a lot of resources in the background
 
