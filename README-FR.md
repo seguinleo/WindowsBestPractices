@@ -30,7 +30,7 @@ Une fois que tout est bien à jour et que l'ordinateur a été redémarré :
 * Nettoyer tous les lecteurs (Taper "Nettoyage de disque" dans la barre de recherche Windows - Exécuter en tant qu'administrateur - Tout cocher)
 * Optimiser tous les lecteurs (Clic droit sur un lecteur - Propriétés - Outils - Optimiser)
 
-> __NOTE__ Pensez à éteindre votre ordinateur la nuit, ne le mettez pas en veille pour prévenir les bugs. Nettoyer aussi régulièrement votre PC de la poussière pour éviter aux composants de trop chauffer et donc de perdre en performances
+> **Note** Pensez à éteindre votre ordinateur la nuit, ne le mettez pas en veille pour prévenir les bugs. Nettoyer aussi régulièrement votre PC de la poussière pour éviter aux composants de trop chauffer et donc de perdre en performances
 
 ## Optimisations avancées
 Désinstaller un maximum d'applications Windows et logiciels que vous n'utilisez pas via le Panneau de configuration. N'utilisez pas d'outils comme Revo Uninstaller qui peuvent désinstaller des applications système comme Edge ou le Store, ce qui va rendre le système instable
@@ -66,7 +66,7 @@ Remettre l'ancien menu du clic droit de Windows 10 sur Windows 11 : `REG ADD "HK
 **Modifications du panneau Nvidia/AMD :**
 * Affichage : sélectionner la plus grande fréquence de rafraîchissement possible, choisir la plus grande intensité de couleur possible (10bpc ou plus), sélectionner "Pas de mise à l'échelle"
 * Paramètres 3D : sélectionner "Utiliser les paramètres d’images 3D avancés", mode de faible latence sur "On", privilégier les performances maximales, activer G-SYNC + V-SYNC + limiter les IPS à 2 en dessous de la fréquence de rafraîchissement de l’écran pour éviter les déchirures d’images (écran 144Hz → limite à 142FPS).
-> __ATTENTION__ Si vous activez la V-SYNC dans le panneau Nvidia/AMD, il faut la désactiver dans les paramètres de tous vos jeux pour éviter des incompatibilités !
+> **Warning** Si vous activez la V-SYNC dans le panneau Nvidia/AMD, il faut la désactiver dans les paramètres de tous vos jeux pour éviter des incompatibilités !
 * Vidéo : choisir la plage dynamique "complète"
 
 **Overclocker sa carte graphique :** l'overclocking permet d'augmenter la fréquence d'horloge de la carte graphique et ainsi avoir plus de performances en jeu. Cependant la température de la carte risque d'augmenter. Personnellement j'utilise [Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) et [Kombustor](https://msikombustor.com/). Kombustor permet de scanner le nombre d'artefacts (il faut cocher la case sur l'écran d'accueil et choisir votre résolution native). Je considère qu'un overclocking est stable si la température de la carte graphique ne dépasse pas 85°C et que Kombustor ne détecte **aucun** artefact en minimum 10 minutes. Ensuite, essayer sur un jeu très gourmand en ressources pour vérifier que le système est stable sur la durée
@@ -79,7 +79,7 @@ Remettre l'ancien menu du clic droit de Windows 10 sur Windows 11 : `REG ADD "HK
 * Configurer votre navigateur pour bloquer les cookies tiers et utiliser HTTPS uniquement
 * Utiliser un DNS personnalisé (DoH, dans les paramètres Windows) comme [Quad9](https://www.quad9.net/fr/) ou [Mullvad](https://mullvad.net/fr/help/dns-over-https-and-dns-over-tls/) plutôt que celui du fournisseur local pour plus de sécurité et de vie privée
 * Activer Bitlocker avec TPM 2.0 sur la version Pro de Windows pour chiffrer les données du lecteur et sécuriser vos fichiers (Clic droit sur un lecteur - Activer Bitlocker)
-> __ATTENTION__ Veuillez à bien sauvegarder la clé de récupération BitLocker dans un cloud ou un disque externe !
+> **Warning** Veuillez à bien sauvegarder la clé de récupération BitLocker dans un cloud ou un disque externe !
 * Utiliser [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) pour contrôler tous vos composants RGB via un seul logiciel. Ainsi, on évite les logiciels comme Razer Synapse ou MSI Dragon Center qui consomment énormément de ressources en arrière-plan
 
 ## Conclusion

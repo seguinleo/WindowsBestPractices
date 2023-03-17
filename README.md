@@ -30,7 +30,7 @@ Once everything is up to date and the PC has been restarted:
 * Clean all drives (Type "Disk Cleanup" in the Windows search bar - Run as administrator - Check all)
 * Optimize all drives (Right click on a drive - Properties - Tools - Optimize)
 
-> __NOTE__ Remember to turn off your computer at night, do not put it to sleep to prevent bugs. Also regularly clean your PC of dust to prevent components from overheating and therefore losing performance
+> **Note** Remember to turn off your computer at night, do not put it to sleep to prevent bugs. Also regularly clean your PC of dust to prevent components from overheating and therefore losing performance
 
 ## Advanced optimizations
 Uninstall a maximum of Windows applications and software that you do not use via the Control Panel. Do not use tools like Revo Uninstaller which can uninstall system apps like Edge or Store which will make the system unstable
@@ -66,7 +66,7 @@ Bring old Windows 10 context menu back on Windows 11: `REG ADD "HKCU\Software\Cl
 **Nvidia/AMD panel changes:**
 * Display: select the highest possible refresh rate, choose the highest possible output colour depth (10bpc or more), select "No scaling"
 * 3D settings: select "Use the advanced 3D image settings", low latency mode to "On", prefer maximum performance, enable G-SYNC + V-SYNC + limit FPS to 2 below screen refresh rate to avoid screen tearing (144Hz screen → limit to 142FPS).
-> __WARNING__ If you enable V-SYNC in the Nvidia/AMD panel, you have to disable it in all your games settings to avoid incompatibilities!
+> **Warning** If you enable V-SYNC in the Nvidia/AMD panel, you have to disable it in all your games settings to avoid incompatibilities!
 * Video: choose "full" dynamic range
 
 **Overclock your graphic card:** overclocking allows you to increase the clock frequency of the graphics card and thus have more performance in the game. However, the temperature of the card may increase. Personally I use [Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) and [Kombustor](https://msikombustor.com/). I like Kombustor because it allows to scan the number of artifacts (you have to check the box on the menu and choose your native resolution). I consider an overclock to be stable if the temperature of the graphics card does not exceed 85°C (185F) and Kombustor detects **no** artifacts in at least 10 minutes. Then try on a very resource-intensive game to verify that the system is stable over time
@@ -79,7 +79,7 @@ Bring old Windows 10 context menu back on Windows 11: `REG ADD "HKCU\Software\Cl
 * Configure your browser to block third-party cookies and use HTTPS only
 * Use a custom DNS (DoH, in Windows settings) like [Quad9](https://www.quad9.net) or [Mullvad](https://mullvad.net/fr/help/dns-over-https-and-dns-over-tls/) rather than the local provider one for more security and privacy
 * Enable Bitlocker with TPM 2.0 on the Pro version of Windows to encrypt drive data and secure your files (Right click on a drive - Enable Bitlocker)
-> __WARNING__ Be sure to back up the BitLocker recovery key to a cloud or external drive!
+> **Warning** Be sure to back up the BitLocker recovery key to a cloud or external drive!
 * Use [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) to control all your RGB components through a single software. Thus, we avoid software like Razer Synapse or MSI Dragon Center which use a lot of resources in the background
 
 ## Conclusion
