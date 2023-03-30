@@ -1,18 +1,16 @@
-# Optimiser Windows
-
-![Last commit](https://img.shields.io/github/last-commit/PouletEnSlip/OptimizeWindows?style=for-the-badge)
+# WindowsBestPractices
 
 [en](/README.md), [fr](/README-FR.md)
 
-Bonjour ! Voici des optimisations simples et saines pour un ordinateur fonctionnant sous Windows 10 et 11. Ces manipulations permettent d'avoir un ordinateur plus performant pour la bureautique et les jeux vidéo. Ces manipulations sont sans risque et peuvent résoudre les lenteurs et crashs de votre ordinateur. Ces optimisations ne sont pas "magiques", je ne promets pas un gain incroyable, le plus efficace étant d'acheter de nouveaux composants. Lisez tout en entier avant de faire quoi que ce soit.
+Bonjour ! Voici des pratiques simples et saines pour un ordinateur fonctionnant sous Windows 10 ou 11. Ces manipulations permettent d'avoir un ordinateur plus performant pour la bureautique et les jeux vidéo. Ces manipulations sont sans risque et peuvent résoudre les lenteurs et crashs de votre ordinateur. Ces pratiques ne sont pas "magiques", je ne promets pas un gain incroyable, le plus efficace étant d'acheter de nouveaux composants. Lisez tout en entier avant de faire quoi que ce soit.
 
 ## Table des matières
-- [Optimisations rapides](#optimisations-rapides)
-- [Optimisations avancées](#optimisations-avancées)
-- [Bonnes pratiques](#bonnes-pratiques)
+- [Pratiques rapides](#pratiques-rapides)
+- [Pratiques avancées](#pratiques-avancées)
+- [Optionnel](#optionnel)
 - [Conclusion](#conclusion)
 
-## Optimisations rapides
+## Pratiques rapides
 Dans l'ordre, à répéter 1 fois par mois environ :
 * Vérifier que vous n'avez pas de virus/malware avec [Malwarebytes](https://fr.malwarebytes.com/)
 * Supprimer l'historique, le cache et les cookies de votre navigateur
@@ -32,8 +30,8 @@ Une fois que tout est bien à jour et que l'ordinateur a été redémarré :
 
 > **Note** Pensez à éteindre votre ordinateur la nuit, ne le mettez pas en veille pour prévenir les bugs. Nettoyer aussi régulièrement votre PC de la poussière pour éviter aux composants de trop chauffer et donc de perdre en performances
 
-## Optimisations avancées
-Désinstaller un maximum d'applications Windows et logiciels que vous n'utilisez pas via le Panneau de configuration. N'utilisez pas d'outils comme Revo Uninstaller qui peuvent désinstaller des applications système comme Edge ou le Store, ce qui va rendre le système instable
+## Pratiques avancées
+Désinstaller un maximum d'applications Windows et logiciels que vous n'utilisez pas via le Panneau de configuration. N'utilisez pas d'outils comme Revo Uninstaller ou CCleaner qui peuvent désinstaller des applications système comme Edge ou le Store, ce qui va rendre le système instable
 
 Désactiver un maximum de programmes qui se lancent au démarrage de Windows (`Ctrl` + `Maj` + `Esc` - Démarrage)
 
@@ -41,17 +39,16 @@ Désactiver Cortana : `REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\W
 
 Désactiver les Widgets sur Windows 11 : `REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Dsh" /v AllowNewsAndInterests /t REG_DWORD /d 00000000 /f` - Redémarrer le PC | Pour annuler : `REG DELETE "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Dsh" /v AllowNewsAndInterests /f`
 
-Décocher "Améliorer la précision du pointeur" pour être paradoxalement plus précis (Panneau de configuration - Matériels - Souris - Options du pointeur)
+Décocher "Améliorer la précision du pointeur" pour éviter l'accélération de la souris (Panneau de configuration - Matériels - Souris - Options du pointeur)
 
-Désactiver la mise en veille prolongée (hibernation) pour libérer de la place sur le lecteur (~3Go) et faire en sorte que le PC s'éteigne complètement quand vous l'éteignez, avec ces deux commandes : `REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 00000000 /f` + `powercfg -h off` - Redémarrer le PC | Pour annuler : `REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 00000001 /f` + `powercfg -h on`
+Désactiver le fast boot et la mise en veille prolongée pour libérer de la place sur le lecteur (~3Go) et prévenir les bugs, avec ces **deux** commandes : `REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 00000000 /f` + `powercfg -h off` - Redémarrer le PC | Pour annuler : `REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 00000001 /f` + `powercfg -h on`
+> **Note** Désactiver le fast boot va rendre le démarrage de votre PC un peu plus long, cependant votre ordinateur s'arrêtera réellement quand vous l'éteignerez, ce qui rendra le système plus stable et évitera les bugs
 
-Réduire les ressources du processeur réservées pour certains processus Windows : `REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Multimedia\SystemProfile" /v SystemResponsiveness /t REG_DWORD /d 00000010 /f` - Redémarrer le PC | Pour annuler : `REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Multimedia\SystemProfile" /v SystemResponsiveness /t REG_DWORD /d 00000020 /f`
-
-Vérifier quelles cases vous voulez cocher dans la section "Confidentialité" dans les paramètres Windows pour limiter la collecte de données personnelles par Microsoft (données de diagnostic, localisation, contacts...)
+Décocher un maximum de cases dans la section "Confidentialité" dans les paramètres Windows pour limiter la collecte de données personnelles par Microsoft (données de diagnostic, localisation, contacts...)
 
 Installer **toutes** les versions de [Visual C++](https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/) pour éviter les erreurs de DLLs manquantes
 
-Désactiver la Xbox Game Bar, avec ces trois commandes : `Get-AppxPackage Microsoft.XboxGamingOverlay | Remove-AppxPackage` + `REG ADD "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR" /v AppCaptureEnabled /t REG_DWORD /d 00000000 /f` + `REG ADD "HKEY_CURRENT_USER\System\GameConfigStore" /v GameDVR_Enabled /t REG_DWORD /d 00000000 /f` - Redémarrer le PC | Pour annuler : `Get-AppxPackage -allusers *Microsoft.XboxGamingOverlay* | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register “$($_.InstallLocation)\AppXManifest.xml”}` + `REG ADD "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR" /v AppCaptureEnabled /t REG_DWORD /d 00000001 /f` + `REG ADD "HKEY_CURRENT_USER\System\GameConfigStore" /v GameDVR_Enabled /t REG_DWORD /d 00000001 /f`
+Désactiver la Xbox Game Bar si vous ne l'utilisez pas, avec ces **trois** commandes : `Get-AppxPackage Microsoft.XboxGamingOverlay | Remove-AppxPackage` + `REG ADD "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR" /v AppCaptureEnabled /t REG_DWORD /d 00000000 /f` + `REG ADD "HKEY_CURRENT_USER\System\GameConfigStore" /v GameDVR_Enabled /t REG_DWORD /d 00000000 /f` - Redémarrer le PC | Pour annuler : `Get-AppxPackage -allusers *Microsoft.XboxGamingOverlay* | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register “$($_.InstallLocation)\AppXManifest.xml”}` + `REG ADD "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR" /v AppCaptureEnabled /t REG_DWORD /d 00000001 /f` + `REG ADD "HKEY_CURRENT_USER\System\GameConfigStore" /v GameDVR_Enabled /t REG_DWORD /d 00000001 /f`
 
 Désactiver les résultats Bing dans la Recherche Windows : `REG ADD "HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v DisableSearchBoxSuggestions /t REG_DWORD /d 00000001 /f` - Redémarrer le PC | Pour annuler : `REG ADD "HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v DisableSearchBoxSuggestions /t REG_DWORD /d 00000000 /f`
 
@@ -65,14 +62,14 @@ Remettre l'ancien menu du clic droit de Windows 10 sur Windows 11 : `REG ADD "HK
 
 **Modifications du panneau Nvidia/AMD :**
 * Affichage : sélectionner la plus grande fréquence de rafraîchissement possible, choisir la plus grande intensité de couleur possible (10bpc ou plus), sélectionner "Pas de mise à l'échelle"
-* Paramètres 3D : sélectionner "Utiliser les paramètres d’images 3D avancés", mode de faible latence sur "On", privilégier les performances maximales, activer G-SYNC + V-SYNC + limiter les IPS à 2 en dessous de la fréquence de rafraîchissement de l’écran pour éviter les déchirures d’images (écran 144Hz → limite à 142FPS).
+* Paramètres 3D : sélectionner "Utiliser les paramètres d’images 3D avancés", mode de faible latence sur "On", privilégier les performances maximales, activer G-SYNC + V-SYNC + limiter les IPS à 2 en dessous de la fréquence de rafraîchissement de l’écran pour éviter les déchirures d’images (écran 144Hz → limite à 142FPS)
 > **Warning** Si vous activez la V-SYNC dans le panneau Nvidia/AMD, il faut la désactiver dans les paramètres de tous vos jeux pour éviter des incompatibilités !
 * Vidéo : choisir la plage dynamique "complète"
 
 **Overclocker sa carte graphique :** l'overclocking permet d'augmenter la fréquence d'horloge de la carte graphique et ainsi avoir plus de performances en jeu. Cependant la température de la carte risque d'augmenter. Personnellement j'utilise [Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) et [Kombustor](https://msikombustor.com/). Kombustor permet de scanner le nombre d'artefacts (il faut cocher la case sur l'écran d'accueil et choisir votre résolution native). Je considère qu'un overclocking est stable si la température de la carte graphique ne dépasse pas 85°C et que Kombustor ne détecte **aucun** artefact en minimum 10 minutes. Ensuite, essayer sur un jeu très gourmand en ressources pour vérifier que le système est stable sur la durée
 
-## Bonnes pratiques
-* Réinstaller Windows (Pro de préférence) complètement (avec une clé USB) avant d’appliquer ces optimisations pour partir sur une base saine
+## Optionnel
+* Réinstaller Windows (Pro de préférence) complètement (avec une clé USB) avant d’appliquer ces manipulations pour partir sur une base saine
 * Toujours garder Windows et ses programmes à jour pour des raisons de sécurité, de stabilité et de compatibilité
 * Utiliser l'antivirus de Windows qui fait très bien son travail. Éviter Avast, Bitdefender...
 * Installer l'extension [uBlock Origin](https://ublockorigin.com/) pour le blocage des publicités et pisteurs, éviter d'installer d'autres extensions qui pourraient ralentir le navigateur

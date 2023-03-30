@@ -1,18 +1,16 @@
-# Optimize Windows
-
-![Last commit](https://img.shields.io/github/last-commit/PouletEnSlip/OptimizeWindows?style=for-the-badge)
+# WindowsBestPractices
 
 [en](/README.md), [fr](/README-FR.md)
 
-Hello! Here are simple and healthy optimizations for a PC running Windows 10 and 11. These manipulations allow you to have a more powerful PC for office and video games. These manipulations are without risk and can solve the slowness and crashes of your PC. These optimizations are not "magic", I do not promise an incredible gain, the most effective being to buy new components. Read everything before doing anything.
+Hello! Here are simple and healthy practices for a PC running Windows 10 or 11. These manipulations allow you to have a more powerful PC for office and video games. These manipulations are without risk and can solve the slowness and crashes of your PC. These practices are not "magic", I do not promise an incredible gain, the most effective being to buy new components. Read everything before doing anything.
 
 ## Table of contents
-- [Quick optimizations](#quick-optimizations)
-- [Advanced optimizations](#advanced-optimizations)
-- [Good practices](#good-practices)
+- [Quick practices](#quick-practices)
+- [Advanced practices](#advanced-practices)
+- [Optional](#optional)
 - [Conclusion](#conclusion)
 
-## Quick optimizations
+## Quick practices
 In order, to be repeated approximately once a month:
 * Check for viruses/malware with [Malwarebytes](https://malwarebytes.com/)
 * Delete your browser history, cache and cookies
@@ -30,10 +28,10 @@ Once everything is up to date and the PC has been restarted:
 * Clean all drives (Type "Disk Cleanup" in the Windows search bar - Run as administrator - Check all)
 * Optimize all drives (Right click on a drive - Properties - Tools - Optimize)
 
-> **Note** Remember to turn off your computer at night, do not put it to sleep to prevent bugs. Also regularly clean your PC of dust to prevent components from overheating and therefore losing performance
+> **Note** Remember to turn off your computer at night, do not put it to sleep to avoid bugs. Also regularly clean your PC of dust to avoid components from overheating and therefore losing performance
 
-## Advanced optimizations
-Uninstall a maximum of Windows applications and software that you do not use via the Control Panel. Do not use tools like Revo Uninstaller which can uninstall system apps like Edge or Store which will make the system unstable
+## Advanced practices
+Uninstall a maximum of Windows applications and software that you do not use via the Control Panel. Do not use tools like Revo Uninstaller or CCleaner which can uninstall system apps like Edge or Store which will make the system unstable
 
 Disable as many programs as possible that launch at Windows startup (`Ctrl` + `Maj` + `Esc` - Startup)
 
@@ -41,17 +39,17 @@ Disable Cortana: `REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Window
 
 Disable Widgets on Windows 11: `REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Dsh" /v AllowNewsAndInterests /t REG_DWORD /d 00000000 /f` - Restart PC | To cancel: `REG DELETE "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Dsh" /v AllowNewsAndInterests /f`
 
-Uncheck "Enhance pointer precision" to be paradoxically more precise (Control Panel - Hardware - Mouse - Pointer Options)
+Uncheck "Enhance pointer precision" 
+to avoid mouse acceleration (Control Panel - Hardware - Mouse - Pointer Options)
 
-Disable hibernation to free up space (~3GB) and make the PC shut down completely when you turn it off, with these two commands: `REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 00000000 /f` + `powercfg -h off` - Restart PC | To cancel: `REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 00000001 /f` + `powercfg -h on`
+Disable fast boot and hibernation to free up space (~3GB) and avoid bugs, with these **two** commands: `REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 00000000 /f` + `powercfg -h off` - Restart PC | To cancel: `REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 00000001 /f` + `powercfg -h on`
+> **Note** Disabling fast boot will make your PC start up a bit longer, however your computer will completely shut down when you turn it off, which will make the system more stable and avoid bugs
 
-Reduce CPU resources reserved for certain Windows processes: `REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Multimedia\SystemProfile" /v SystemResponsiveness /t REG_DWORD /d 00000010 /f` - Restart PC | To cancel: `REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\WindowsNT\CurrentVersion\Multimedia\SystemProfile" /v SystemResponsiveness /t REG_DWORD /d 00000020 /f`
-
-Check which boxes you want to tick in the "Privacy" section in Windows settings to limit the collection of personal data by Microsoft (diagnostic data, location, contacts...)
+Uncheck as many boxes as possible in the "Privacy" section in Windows settings to limit the collection of personal data by Microsoft (diagnostic data, location, contacts...)
 
 Install **all** versions of [Visual C++](https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/) to avoid missing DLL errors
 
-Disable Xbox Game Bar, with these three commands: `Get-AppxPackage Microsoft.XboxGamingOverlay | Remove-AppxPackage` + `REG ADD "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR" /v AppCaptureEnabled /t REG_DWORD /d 00000000 /f` + `REG ADD "HKEY_CURRENT_USER\System\GameConfigStore" /v GameDVR_Enabled /t REG_DWORD /d 00000000 /f` - Restart PC | To cancel: `Get-AppxPackage -allusers *Microsoft.XboxGamingOverlay* | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register “$($_.InstallLocation)\AppXManifest.xml”}` + `REG ADD "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR" /v AppCaptureEnabled /t REG_DWORD /d 00000001 /f` + `REG ADD "HKEY_CURRENT_USER\System\GameConfigStore" /v GameDVR_Enabled /t REG_DWORD /d 00000001 /f`
+Disable Xbox Game Bar if you don't use it, with these **three** commands: `Get-AppxPackage Microsoft.XboxGamingOverlay | Remove-AppxPackage` + `REG ADD "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR" /v AppCaptureEnabled /t REG_DWORD /d 00000000 /f` + `REG ADD "HKEY_CURRENT_USER\System\GameConfigStore" /v GameDVR_Enabled /t REG_DWORD /d 00000000 /f` - Restart PC | To cancel: `Get-AppxPackage -allusers *Microsoft.XboxGamingOverlay* | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register “$($_.InstallLocation)\AppXManifest.xml”}` + `REG ADD "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR" /v AppCaptureEnabled /t REG_DWORD /d 00000001 /f` + `REG ADD "HKEY_CURRENT_USER\System\GameConfigStore" /v GameDVR_Enabled /t REG_DWORD /d 00000001 /f`
 
 Disable Bing results in Windows Search: `REG ADD "HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v DisableSearchBoxSuggestions /t REG_DWORD /d 00000001 /f` - Restart PC | To cancel: `REG ADD "HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v DisableSearchBoxSuggestions /t REG_DWORD /d 00000000 /f`
 
@@ -65,21 +63,21 @@ Bring old Windows 10 context menu back on Windows 11: `REG ADD "HKCU\Software\Cl
 
 **Nvidia/AMD panel changes:**
 * Display: select the highest possible refresh rate, choose the highest possible output colour depth (10bpc or more), select "No scaling"
-* 3D settings: select "Use the advanced 3D image settings", low latency mode to "On", prefer maximum performance, enable G-SYNC + V-SYNC + limit FPS to 2 below screen refresh rate to avoid screen tearing (144Hz screen → limit to 142FPS).
+* 3D settings: select "Use the advanced 3D image settings", low latency mode to "On", prefer maximum performance, enable G-SYNC + V-SYNC + limit FPS to 2 below screen refresh rate to avoid screen tearing (144Hz screen → limit to 142FPS)
 > **Warning** If you enable V-SYNC in the Nvidia/AMD panel, you have to disable it in all your games settings to avoid incompatibilities!
 * Video: choose "full" dynamic range
 
 **Overclock your graphic card:** overclocking allows you to increase the clock frequency of the graphics card and thus have more performance in the game. However, the temperature of the card may increase. Personally I use [Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) and [Kombustor](https://msikombustor.com/). I like Kombustor because it allows to scan the number of artifacts (you have to check the box on the menu and choose your native resolution). I consider an overclock to be stable if the temperature of the graphics card does not exceed 85°C (185F) and Kombustor detects **no** artifacts in at least 10 minutes. Then try on a very resource-intensive game to verify that the system is stable over time
 
-## Good practices
-* Reinstall Windows (preferably Pro) completely (with a USB key) before applying these optimizations to start on a clean system
+## Optional
+* Reinstall Windows (preferably Pro) completely (with a USB key) before applying these manipulations to start on a clean system
 * Always keep Windows and its programs up-to-date for security, stability and compatibility reasons
 * Use the Windows antivirus which does its job very well. Avoid Avast, Bitdefender...
 * Install the extension [uBlock Origin](https://ublockorigin.com/) for blocking ads and trackers, avoid installing other extensions that could slow down the browser
 * Configure your browser to block third-party cookies and use HTTPS only
 * Use a custom DNS (DoH, in Windows settings) like [Quad9](https://www.quad9.net) or [Mullvad](https://mullvad.net/fr/help/dns-over-https-and-dns-over-tls/) rather than the local provider one for more security and privacy
 * Enable BitLocker with TPM 2.0 on Windows Pro to encrypt drive data and secure your files (Right click on a drive - Enable BitLocker)
-> **Warning** Be sure to back up the BitLocker recovery key to a cloud or external drive!
+> **Warning** Be sure to back up the BitLocker recovery key to a cloud or an external drive!
 * Use [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) to control all your RGB components through a single software. Thus, we avoid software like Razer Synapse or MSI Dragon Center which use a lot of resources in the background
 
 ## Conclusion
