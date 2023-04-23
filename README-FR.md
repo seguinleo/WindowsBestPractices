@@ -57,16 +57,20 @@ Remettre l'ancien menu du clic droit de Windows 10 sur Windows 11 : `REG ADD "HK
 **Modifier les options d’alimentation dans le panneau de configuration :**
 * CPU Intel : choisir "Performances élevées"
 * CPU AMD Ryzen 1000, 2000, 3000 et 4000 : choisir "AMD Ryzen Balanced"
-* CPU AMD Ryzen 5000, 6000, 7000 et + : choisir "Utilisation normale"
+* CPU AMD Ryzen 5000 et plus récent : choisir "Utilisation normale"
 * Dans les paramètres avancés : arrêter le disque dur après 0min (jamais) et désactiver la suspension sélective USB
 
 **Modifications du panneau Nvidia/AMD :**
-* Affichage : sélectionner la plus grande fréquence de rafraîchissement possible, choisir la plus grande intensité de couleur possible (10bpc ou plus), sélectionner "Pas de mise à l'échelle"
-* Paramètres 3D : sélectionner "Utiliser les paramètres d’images 3D avancés", mode de faible latence sur "On", privilégier les performances maximales, activer G-SYNC + V-SYNC + limiter les IPS à 2 en dessous de la fréquence de rafraîchissement de l’écran pour éviter les déchirures d’images (écran 144Hz → limite à 142FPS)
-> **Warning** Si vous activez la V-SYNC dans le panneau Nvidia/AMD, il faut la désactiver dans les paramètres de tous vos jeux pour éviter des incompatibilités !
-* Vidéo : choisir la plage dynamique "complète"
+* Sélectionner la plus grande fréquence de rafraîchissement possible (144Hz, 180Hz...)
+* Choisir la plus grande intensité/profondeur de couleur possible (8bpc, 10bpc...)
+* Activer G-SYNC/FreeSync + V-SYNC + limiter les IPS à 2 en dessous de la fréquence de rafraîchissement de l’écran pour éviter les déchirures d’images (écran 144Hz → limite à 142FPS)
+* Spécifique Nvidia : choisir la plage dynamique "complète" dans l'onglet couleurs vidéo, sélectionner "Utiliser les paramètres d’images 3D avancés", dans ces paramètres -> mode de faible latence sur "Activé", privilégier les performances maximales
+* Spécifique AMD : activer Radeon Anti-Lag et Radeon Chill
+> **Warning** Si vous activez la V-SYNC dans le panneau Nvidia/AMD, il faut la désactiver dans les paramètres de tous vos jeux pour éviter des conflits !
 
-**Overclocker sa carte graphique :** l'overclocking permet d'augmenter la fréquence d'horloge de la carte graphique et ainsi avoir plus de performances en jeu. Cependant la température de la carte risque d'augmenter. Personnellement j'utilise [Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) et [Kombustor](https://msikombustor.com/). Kombustor permet de scanner le nombre d'artefacts (il faut cocher la case sur l'écran d'accueil et choisir votre résolution native). Je considère qu'un overclocking est stable si la température de la carte graphique ne dépasse pas 85°C et que Kombustor ne détecte **aucun** artefact en minimum 10 minutes. Ensuite, essayer sur un jeu très gourmand en ressources pour vérifier que le système est stable sur la durée
+**Overclocker sa carte graphique :** l'overclocking permet d'augmenter la fréquence d'horloge de la carte graphique et ainsi avoir plus de performances en jeu. Cependant la température de la carte risque d'augmenter. Guide vidéo [ici](https://www.youtube.com/watch?v=64GJck-GWaM). Personnellement j'utilise [Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) et [Kombustor](https://msikombustor.com/). Kombustor permet de scanner le nombre d'artefacts (il faut cocher la case sur l'écran d'accueil et choisir la résolution de votre écran). Je considère qu'un overclocking est stable si la température de la carte graphique ne dépasse pas 85°C et que Kombustor ne détecte **aucun** artefact en minimum 10 minutes. Ensuite, essayer sur un jeu très gourmand en ressources pour vérifier que le système est stable sur la durée
+
+**Undervolter sa carte graphique :** l'undervolting permet de baisser la tension que reçoit la carte graphique et ainsi avoir de plus basses températures. Guide vidéo [ici](https://www.youtube.com/watch?v=ABWhmciIpe4). Comme pour l'overclocking, j'utilise personnellement [Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) et [Kombustor](https://msikombustor.com/)
 
 ## Optionnel
 * Réinstaller Windows (Pro de préférence) complètement (avec une clé USB) avant d’appliquer ces manipulations pour partir sur une base saine
