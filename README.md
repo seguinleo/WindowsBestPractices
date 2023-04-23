@@ -58,16 +58,20 @@ Bring old Windows 10 context menu back on Windows 11: `REG ADD "HKCU\Software\Cl
 **Change power options in control panel:**
 * Intel CPU: choose "High performance"
 * AMD Ryzen 1000, 2000, 3000 and 4000 CPU: choose "AMD Ryzen Balanced"
-* AMD Ryzen 5000, 6000, 7000 and + CPU: choose "Balanced"
-* In advanced settings: shutdown hard drive after 0min (never) and disable USB selective suspend
+* AMD Ryzen 5000 CPU and newer: choose "Balanced"
+* In advanced settings: turn off hard disk after 0min (never) and disable USB selective suspend
 
 **Nvidia/AMD panel changes:**
-* Display: select the highest possible refresh rate, choose the highest possible output colour depth (10bpc or more), select "No scaling"
-* 3D settings: select "Use the advanced 3D image settings", low latency mode to "On", prefer maximum performance, enable G-SYNC + V-SYNC + limit FPS to 2 below screen refresh rate to avoid screen tearing (144Hz screen → limit to 142FPS)
-> **Warning** If you enable V-SYNC in the Nvidia/AMD panel, you have to disable it in all your games settings to avoid incompatibilities!
-* Video: choose "full" dynamic range
+* Select the highest possible refresh rate (144Hz, 180Hz...)
+* Choose the highest possible color intensity/depth (8bpc, 10bpc...)
+* Enable G-SYNC/FreeSync + V-SYNC + limit FPS to 2 below screen refresh rate to avoid frame tearing (144Hz screen → limit to 142FPS)
+* Nvidia specific: choose "full" dynamic range in the video colors tab, select "Use advanced 3D image settings", in these settings -> low latency mode on "On", prefer maximum performance
+* AMD specific: enable Radeon Anti-Lag and Radeon Chill
+> **Warning** If you enable V-SYNC in the Nvidia/AMD panel, you must disable it in the settings of all your games to avoid conflicts!
 
-**Overclock your graphic card:** overclocking allows you to increase the clock frequency of the graphics card and thus have more performance in the game. However, the temperature of the card may increase. Personally I use [Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) and [Kombustor](https://msikombustor.com/). I like Kombustor because it allows to scan the number of artifacts (you have to check the box on the menu and choose your native resolution). I consider an overclock to be stable if the temperature of the graphics card does not exceed 85°C (185F) and Kombustor detects **no** artifacts in at least 10 minutes. Then try on a very resource-intensive game to verify that the system is stable over time
+**Overclock your graphics card:** overclocking allows you to increase the clock frequency of your graphics card and thus have more performance in games. However, the temperature of the card may increase. Video guide [here](https://www.youtube.com/watch?v=6_Me603fnq8). Personally I use [Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) and [Kombustor](https://msikombustor.com/). Kombustor allows you to scan the number of artifacts (you have to check the box on the welcome screen and choose your screen resolution). I consider an overclock to be stable if the temperature of the graphics card does not exceed 85°C/185°F and Kombustor detects **no** artifacts in at least 10 minutes. Then, try on a very resource-intensive game to verify that the system is stable over time
+
+**Undervolt your graphics card:** undervolting allows you to lower the voltage received by the graphics card and thus have lower temperatures. Video guide [here](https://www.youtube.com/watch?v=eaVp6vcVIts). Just like overclocking, I personally use [Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) and [Kombustor](https://msikombustor.com/)
 
 ## Optional
 * Reinstall Windows (preferably Pro) completely (with a USB key) before applying these manipulations to start on a clean system
