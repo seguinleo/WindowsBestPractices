@@ -2,15 +2,16 @@
 
 [en](/README.md), [fr](/README-FR.md)
 
-Hello! Here are simple and healthy practices for a PC running Windows 10 or 11. These manipulations allow you to have a more powerful PC for office and video games. These manipulations are without risk and can solve the slowness and crashes of your PC. These practices are not "magic", I do not promise an incredible gain, the most effective being to buy new components. Read everything before doing anything.
+Hello! Here are simple and healthy practices for a PC running Windows 10 or 11. These manipulations allow you to have a more powerful PC for office and video games. These manipulations are without risk and can solve the slowness and crashes of your PC. These practices are not "magic", I do not promise an incredible gain, the most effective being to buy new and more efficient components. Read everything before doing anything.
 
-## Table of contents
-- [Quick practices](#quick-practices)
-- [Advanced practices](#advanced-practices)
-- [Optional](#optional)
-- [Conclusion](#conclusion)
+## 📖 Table of contents
+- [Quick practices](#🧹-quick-practices)
+- [Advanced practices](#🛠️-advanced-practices)
+- [Optional](#💡-optional)
+- [Conclusion](#🎉-conclusion)
+- [Sources](#🔗-sources)
 
-## Quick practices
+## 🧹 Quick practices
 In order, to be repeated approximately once a month:
 * Check for viruses/malware with [Malwarebytes](https://malwarebytes.com/)
 * Delete your browser history, cache and cookies
@@ -19,18 +20,18 @@ In order, to be repeated approximately once a month:
 * Update Windows via Windows Update in settings
 
 Once everything is up to date and the PC has been restarted:
-* Delete Windows Update files (`C:/Windows/SoftwareDistribution/Download/` - Delete all folders to avoid errors in future updates)
+* Delete Windows Update files (`C:/Windows/SoftwareDistribution/Download/` - Delete all folders to avoid errors during future updates)
 * Delete all temporary files (`Windows` + `R` - Type "%temp%" - Delete all)
 * Repair system files: `sfc /scannow`
 * Flush DNS cache: `ipconfig /flushdns`
-* Repair Windows Image: `Dism /Online /Cleanup-Image /RestoreHealth`
+* Repair Windows image: `Dism /Online /Cleanup-Image /RestoreHealth`
 * Reset icon cache with my [script](https://github.com/PouletEnSlip/ResetIconCache) to avoid white icons
 * Clean all drives (Type "Disk Cleanup" in the Windows search bar - Run as administrator - Check all)
 * Optimize all drives (Right click on a drive - Properties - Tools - Optimize)
 
 > **Note** Remember to turn off your computer at night, do not put it to sleep to avoid bugs. Also regularly clean your PC of dust to avoid components from overheating and therefore losing performance
 
-## Advanced practices
+## 🛠️ Advanced practices
 Uninstall a maximum of Windows applications and software that you do not use via the Control Panel. Do not use tools like Revo Uninstaller or CCleaner which can uninstall system apps like Edge or Store which will make the system unstable
 
 Disable as many programs as possible that launch at Windows startup (`Ctrl` + `Maj` + `Esc` - Startup)
@@ -39,8 +40,7 @@ Disable Cortana: `REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Window
 
 Disable Widgets on Windows 11: `REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Dsh" /v AllowNewsAndInterests /t REG_DWORD /d 00000000 /f` - Restart PC | To cancel: `REG DELETE "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Dsh" /v AllowNewsAndInterests /f`
 
-Uncheck "Enhance pointer precision" 
-to avoid mouse acceleration (Control Panel - Hardware - Mouse - Pointer Options)
+Uncheck "Enhance pointer precision" to avoid mouse acceleration (Control Panel - Hardware - Mouse - Pointer Options)
 
 Disable fast boot and hibernation to free up space (~3GB) and avoid bugs, with these **two** commands: `REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 00000000 /f` + `powercfg -h off` - Restart PC | To cancel: `REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 00000001 /f` + `powercfg -h on`
 > **Note** Disabling fast boot will make your PC start up a bit longer, however your computer will completely shut down when you turn it off, which will make the system more stable and avoid bugs
@@ -59,7 +59,7 @@ Bring old Windows 10 context menu back on Windows 11: `REG ADD "HKCU\Software\Cl
 * Intel CPU: choose "High performance"
 * AMD Ryzen 1000, 2000, 3000 and 4000 CPU: choose "AMD Ryzen Balanced"
 * AMD Ryzen 5000 CPU and newer: choose "Balanced"
-* In advanced settings: turn off hard disk after 0min (never) and disable USB selective suspend
+* In advanced plan settings: turn off hard disk after 0min (never) and disable USB selective suspend
 
 **Nvidia/AMD panel changes:**
 * Select the highest possible refresh rate (144Hz, 180Hz...)
@@ -71,21 +71,22 @@ Bring old Windows 10 context menu back on Windows 11: `REG ADD "HKCU\Software\Cl
 
 **Overclock your graphics card:** overclocking allows you to increase the clock frequency of your graphics card and thus have more performance in games. However, the temperature of the card may increase. Video guide [here](https://www.youtube.com/watch?v=6_Me603fnq8). Personally I use [Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) and [Kombustor](https://msikombustor.com/). Kombustor allows you to scan the number of artifacts (you have to check the box on the welcome screen and choose your screen resolution). I consider an overclock to be stable if the temperature of the graphics card does not exceed 85°C/185°F and Kombustor detects **no** artifacts in at least 10 minutes. Then, try on a very resource-intensive game to verify that the system is stable over time
 
-**Undervolt your graphics card:** undervolting allows you to lower the voltage received by the graphics card and thus have lower temperatures. Video guide [here](https://www.youtube.com/watch?v=eaVp6vcVIts). Just like overclocking, I personally use [Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) and [Kombustor](https://msikombustor.com/)
+**Undervolt your graphics card:** undervolting allows you to lower the voltage received by the graphics card and thus have lower temperatures. Video guide [here](https://www.youtube.com/watch?v=eaVp6vcVIts). Just like overclocking, I use Afterburner and Kombustor
 
-## Optional
+## 💡 Optional
 * Reinstall Windows (preferably Pro) completely (with a USB key) before applying these manipulations to start on a clean system
 * Always keep Windows and its programs up-to-date for security, stability and compatibility reasons
 * Use the Windows antivirus which does its job very well. Avoid Avast, Bitdefender...
+* Prefer [Firefox](https://www.mozilla.org/en-US/firefox/new/) to Chrome for privacy reasons
 * Install the extension [uBlock Origin](https://ublockorigin.com/) for blocking ads and trackers, avoid installing other extensions that could slow down the browser
 * Configure your browser to block third-party cookies and use HTTPS only
-* Use a custom DNS (DoH, in Windows settings) like [Quad9](https://www.quad9.net) or [Mullvad](https://mullvad.net/fr/help/dns-over-https-and-dns-over-tls/) rather than the local provider one for more security and privacy
+* Use a custom DNS (DoH, in Windows settings) like [Quad9](https://www.quad9.net) or [Mullvad](https://mullvad.net/fr/help/dns-over-https-and-dns-over-tls/) rather than that of the local provider for security and privacy reasons
 * Enable BitLocker with TPM 2.0 on Windows Pro to encrypt drive data and secure your files (Right click on a drive - Enable BitLocker)
 > **Warning** Be sure to back up the BitLocker recovery key to a cloud or an external drive!
-* Use [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) to control all your RGB components through a single software. Thus, we avoid software like Razer Synapse or MSI Dragon Center which use a lot of resources in the background
+* Use [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) to control all your RGB components through a single software. Thus, we avoid software like Razer Synapse, ASUS Aura or MSI Dragon Center which use a lot of resources in the background
 
-## Conclusion
+## 🎉 Conclusion
 That's it! Your PC should be faster and more efficient. I recommend reinstalling Windows every year, taking care to make backups. I advise against other manipulations which could damage the system (custom ISO, PowerShell scripts, Internet connection optimizer... these are scams).
 
-### Sources
-[Microsoft](https://learn.microsoft.com/en-us/windows/security/) | [Discord Entraide Informatique](https://discord.gg/WMsR7dT) | [Piwi](https://github.com/Piwielle) | [BlurBusters](https://blurbusters.com) | [PrivacyGuides](https://privacyguides.org/)
+### 🔗 Sources
+[Microsoft](https://learn.microsoft.com/en-us/windows/security/) | [Discord Entraide Informatique (fr)](https://discord.gg/WMsR7dT) | [Piwi](https://github.com/Piwielle) | [BlurBusters](https://blurbusters.com) | [PrivacyGuides](https://privacyguides.org/)
