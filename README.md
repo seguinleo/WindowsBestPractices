@@ -6,10 +6,10 @@ Hello! Here are simple and healthy practices for a PC running Windows 10 or 11. 
 
 ## 📖 Table of contents
 - [Quick practices](#quick-practices)
-- [Advanced practices](#🛠️-advanced-practices)
-- [Optional](#💡-optional)
-- [Conclusion](#🎉-conclusion)
-- [Sources](#🔗-sources)
+- [Advanced practices](#advanced-practices)
+- [Optional](#optional)
+- [Conclusion](#conclusion)
+- [Sources](#sources)
 
 ## 🧹Quick practices
 In order, to be repeated approximately once a month:
@@ -31,7 +31,7 @@ Once everything is up to date and the PC has been restarted:
 
 > **Note** Remember to turn off your computer at night, do not put it to sleep to avoid bugs. Also regularly clean your PC of dust to avoid components from overheating and therefore losing performance
 
-## 🛠️ Advanced practices
+## 🛠️Advanced practices
 Uninstall a maximum of Windows applications and software that you do not use via the Control Panel. Do not use tools like Revo Uninstaller or CCleaner which can uninstall system apps like Edge or Store which will make the system unstable
 
 Disable as many programs as possible that launch at Windows startup (`Ctrl` + `Maj` + `Esc` - Startup)
@@ -73,7 +73,7 @@ Bring old Windows 10 context menu back on Windows 11: `REG ADD "HKCU\Software\Cl
 
 **Undervolt your graphics card:** undervolting allows you to lower the voltage received by the graphics card and thus have lower temperatures. Video guide [here](https://www.youtube.com/watch?v=eaVp6vcVIts). Just like overclocking, I use Afterburner and Kombustor
 
-## 💡 Optional
+## 💡Optional
 * Reinstall Windows (preferably Pro) completely (with a USB key) before applying these manipulations to start on a clean system
 * Always keep Windows and its programs up-to-date for security, stability and compatibility reasons
 * Use the Windows antivirus which does its job very well. Avoid Avast, Bitdefender...
@@ -85,8 +85,8 @@ Bring old Windows 10 context menu back on Windows 11: `REG ADD "HKCU\Software\Cl
 > **Warning** Be sure to back up the BitLocker recovery key to a cloud or an external drive!
 * Use [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) to control all your RGB components through a single software. Thus, we avoid software like Razer Synapse, ASUS Aura or MSI Dragon Center which use a lot of resources in the background
 
-## 🎉 Conclusion
+## 🎉Conclusion
 That's it! Your PC should be faster and more efficient. I recommend reinstalling Windows every year, taking care to make backups. I advise against other manipulations which could damage the system (custom ISO, PowerShell scripts, Internet connection optimizer... these are scams).
 
-### 🔗 Sources
+### 🔗Sources
 [Microsoft](https://learn.microsoft.com/en-us/windows/security/) | [Discord Entraide Informatique (fr)](https://discord.gg/WMsR7dT) | [Piwi](https://github.com/Piwielle) | [BlurBusters](https://blurbusters.com) | [PrivacyGuides](https://privacyguides.org/)
