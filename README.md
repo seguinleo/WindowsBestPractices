@@ -1,5 +1,7 @@
 # WindowsBestPractices
 
+![img](https://repository-images.githubusercontent.com/540623246/8acc5ef0-1f81-4ab5-96f2-3aa5ef0a2c45)
+
 [en](/README.md), [fr](/README-FR.md)
 
 Hello! Here are simple and healthy practices for a PC running Windows 10 or 11. These manipulations allow you to have a more powerful PC for office and video games. These manipulations are without risk and can solve the slowness and crashes of your PC. These practices are not "magic", I do not promise an incredible gain, the most effective being to buy new and more efficient components. Read everything before doing anything.
