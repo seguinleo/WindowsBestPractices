@@ -1,17 +1,19 @@
 # WindowsBestPractices
 
+![img](https://repository-images.githubusercontent.com/540623246/8acc5ef0-1f81-4ab5-96f2-3aa5ef0a2c45)
+
 [en](/README.md), [fr](/README-FR.md)
 
 Bonjour ! Voici des pratiques simples et saines pour un ordinateur fonctionnant sous Windows 10 ou 11. Ces manipulations permettent d'avoir un ordinateur plus performant pour la bureautique et les jeux vidéo. Ces manipulations sont sans risque et peuvent résoudre les lenteurs et crashs de votre ordinateur. Ces pratiques ne sont pas "magiques", je ne promets pas un gain incroyable, le plus efficace étant d'acheter de nouveaux composants plus performants. Lisez tout en entier avant de faire quoi que ce soit.
 
 ## Table des matières
-- [Pratiques rapides](#🧹-pratiques-rapides)
-- [Pratiques avancées](#🛠️-pratiques-avancées)
-- [Optionnel](#💡-optionnel)
-- [Conclusion](#🎉-conclusion)
-- [Sources](#🔗-sources)
+- [Pratiques rapides](#pratiques-rapides)
+- [Pratiques avancées](#🛠pratiques-avancées)
+- [Optionnel](#optionnel)
+- [Conclusion](#conclusion)
+- [Sources](#sources)
 
-## 🧹 Pratiques rapides
+## 🧹Pratiques rapides
 Dans l'ordre, à répéter 1 fois par mois environ :
 * Vérifier que vous n'avez pas de virus/malware avec [Malwarebytes](https://fr.malwarebytes.com/)
 * Supprimer l'historique, le cache et les cookies de votre navigateur
@@ -31,7 +33,7 @@ Une fois que tout est bien à jour et que l'ordinateur a été redémarré :
 
 > **Note** Pensez à éteindre votre ordinateur la nuit, ne le mettez pas en veille pour prévenir les bugs. Nettoyer aussi régulièrement votre PC de la poussière pour éviter aux composants de trop chauffer et donc de perdre en performances
 
-## 🛠️ Pratiques avancées
+## 🛠️Pratiques avancées
 Désinstaller un maximum d'applications Windows et logiciels que vous n'utilisez pas via le Panneau de configuration. N'utilisez pas d'outils comme Revo Uninstaller ou CCleaner qui peuvent désinstaller des applications système comme Edge ou le Store, ce qui va rendre le système instable
 
 Désactiver un maximum de programmes qui se lancent au démarrage de Windows (`Ctrl` + `Maj` + `Esc` - Démarrage)
@@ -73,7 +75,7 @@ Remettre l'ancien menu du clic droit de Windows 10 sur Windows 11 : `REG ADD "HK
 
 **Undervolter sa carte graphique :** l'undervolting permet de baisser la tension que reçoit la carte graphique et ainsi avoir de plus basses températures. Guide vidéo [ici](https://www.youtube.com/watch?v=ABWhmciIpe4). Comme pour l'overclocking, j'utilise Afterburner et Kombustor
 
-## 💡 Optionnel
+## 💡Optionnel
 * Réinstaller Windows (Pro de préférence) complètement (avec une clé USB) avant d’appliquer ces manipulations pour partir sur une base saine
 * Toujours garder Windows et ses programmes à jour pour des raisons de sécurité, de stabilité et de compatibilité
 * Utiliser l'antivirus de Windows qui fait très bien son travail. Éviter Avast, Bitdefender...
@@ -85,8 +87,8 @@ Remettre l'ancien menu du clic droit de Windows 10 sur Windows 11 : `REG ADD "HK
 > **Warning** Veuillez à bien sauvegarder la clé de récupération BitLocker dans un cloud ou un disque externe !
 * Utiliser [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) pour contrôler tous vos composants RGB via un seul logiciel. Ainsi, on évite les logiciels comme Razer Synapse, ASUS Aura ou MSI Dragon Center qui consomment énormément de ressources en arrière-plan
 
-## 🎉 Conclusion
+## 🎉Conclusion
 Voilà ! Votre PC devrait être plus rapide et performant. Je recommande une réinstallation de Windows tous les ans en prenant le soin de faire des sauvegardes. Je déconseille d'autres manipulations qui pourraient endommager le système (ISO custom, scripts PowerShell, optimiseur de connexion Internet... ce sont très souvent des arnaques).
 
-### 🔗 Sources
+### 🔗Sources
 [Microsoft](https://learn.microsoft.com/en-us/windows/security/) | [Discord Entraide Informatique](https://discord.gg/WMsR7dT) | [Piwi](https://github.com/Piwielle) | [BlurBusters](https://blurbusters.com/) | [PrivacyGuides](https://privacyguides.org/)
