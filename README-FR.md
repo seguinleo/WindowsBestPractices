@@ -8,7 +8,7 @@ Bonjour ! Voici des pratiques simples et saines pour un ordinateur fonctionnant 
 
 ## Table des matières
 - [Pratiques rapides](#pratiques-rapides)
-- [Pratiques avancées](#🛠pratiques-avancées)
+- [Pratiques avancées](#pratiques-avancées)
 - [Optionnel](#optionnel)
 - [Conclusion](#conclusion)
 - [Sources](#sources)
