@@ -11,7 +11,7 @@ Hello! Here are simple and healthy practices for a PC running Windows 10 or 11. 
 - [Conclusion](#🎉-conclusion)
 - [Sources](#🔗-sources)
 
-## 🧹 Quick practices
+## 🧹Quick practices
 In order, to be repeated approximately once a month:
 * Check for viruses/malware with [Malwarebytes](https://malwarebytes.com/)
 * Delete your browser history, cache and cookies
