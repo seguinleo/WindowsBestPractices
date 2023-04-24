@@ -5,7 +5,7 @@
 Hello! Here are simple and healthy practices for a PC running Windows 10 or 11. These manipulations allow you to have a more powerful PC for office and video games. These manipulations are without risk and can solve the slowness and crashes of your PC. These practices are not "magic", I do not promise an incredible gain, the most effective being to buy new and more efficient components. Read everything before doing anything.
 
 ## 📖 Table of contents
-- [Quick practices](#🧹-quick-practices)
+- [Quick practices](#quick-practices)
 - [Advanced practices](#🛠️-advanced-practices)
 - [Optional](#💡-optional)
 - [Conclusion](#🎉-conclusion)
