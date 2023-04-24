@@ -33,7 +33,7 @@ Once everything is up to date and the PC has been restarted:
 
 > **Note** Remember to turn off your computer at night, do not put it to sleep to avoid bugs. Also regularly clean your PC of dust to avoid components from overheating and therefore losing performance
 
-## 🛠️Advanced practices
+## 🔧Advanced practices
 Uninstall a maximum of Windows applications and software that you do not use via the Control Panel. Do not use tools like Revo Uninstaller or CCleaner which can uninstall system apps like Edge or Store which will make the system unstable
 
 Disable as many programs as possible that launch at Windows startup (`Ctrl` + `Maj` + `Esc` - Startup)
