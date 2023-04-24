@@ -2,15 +2,16 @@
 
 [en](/README.md), [fr](/README-FR.md)
 
-Bonjour ! Voici des pratiques simples et saines pour un ordinateur fonctionnant sous Windows 10 ou 11. Ces manipulations permettent d'avoir un ordinateur plus performant pour la bureautique et les jeux vidéo. Ces manipulations sont sans risque et peuvent résoudre les lenteurs et crashs de votre ordinateur. Ces pratiques ne sont pas "magiques", je ne promets pas un gain incroyable, le plus efficace étant d'acheter de nouveaux composants. Lisez tout en entier avant de faire quoi que ce soit.
+Bonjour ! Voici des pratiques simples et saines pour un ordinateur fonctionnant sous Windows 10 ou 11. Ces manipulations permettent d'avoir un ordinateur plus performant pour la bureautique et les jeux vidéo. Ces manipulations sont sans risque et peuvent résoudre les lenteurs et crashs de votre ordinateur. Ces pratiques ne sont pas "magiques", je ne promets pas un gain incroyable, le plus efficace étant d'acheter de nouveaux composants plus performants. Lisez tout en entier avant de faire quoi que ce soit.
 
 ## Table des matières
-- [Pratiques rapides](#pratiques-rapides)
-- [Pratiques avancées](#pratiques-avancées)
-- [Optionnel](#optionnel)
-- [Conclusion](#conclusion)
+- [Pratiques rapides](#🧹-pratiques-rapides)
+- [Pratiques avancées](#🛠️-pratiques-avancées)
+- [Optionnel](#💡-optionnel)
+- [Conclusion](#🎉-conclusion)
+- [Sources](#🔗-sources)
 
-## Pratiques rapides
+## 🧹 Pratiques rapides
 Dans l'ordre, à répéter 1 fois par mois environ :
 * Vérifier que vous n'avez pas de virus/malware avec [Malwarebytes](https://fr.malwarebytes.com/)
 * Supprimer l'historique, le cache et les cookies de votre navigateur
@@ -30,7 +31,7 @@ Une fois que tout est bien à jour et que l'ordinateur a été redémarré :
 
 > **Note** Pensez à éteindre votre ordinateur la nuit, ne le mettez pas en veille pour prévenir les bugs. Nettoyer aussi régulièrement votre PC de la poussière pour éviter aux composants de trop chauffer et donc de perdre en performances
 
-## Pratiques avancées
+## 🛠️ Pratiques avancées
 Désinstaller un maximum d'applications Windows et logiciels que vous n'utilisez pas via le Panneau de configuration. N'utilisez pas d'outils comme Revo Uninstaller ou CCleaner qui peuvent désinstaller des applications système comme Edge ou le Store, ce qui va rendre le système instable
 
 Désactiver un maximum de programmes qui se lancent au démarrage de Windows (`Ctrl` + `Maj` + `Esc` - Démarrage)
@@ -58,7 +59,7 @@ Remettre l'ancien menu du clic droit de Windows 10 sur Windows 11 : `REG ADD "HK
 * CPU Intel : choisir "Performances élevées"
 * CPU AMD Ryzen 1000, 2000, 3000 et 4000 : choisir "AMD Ryzen Balanced"
 * CPU AMD Ryzen 5000 et plus récent : choisir "Utilisation normale"
-* Dans les paramètres avancés : arrêter le disque dur après 0min (jamais) et désactiver la suspension sélective USB
+* Dans les paramètres avancés du mode : arrêter le disque dur après 0min (jamais) et désactiver la suspension sélective USB
 
 **Modifications du panneau Nvidia/AMD :**
 * Sélectionner la plus grande fréquence de rafraîchissement possible (144Hz, 180Hz...)
@@ -70,21 +71,22 @@ Remettre l'ancien menu du clic droit de Windows 10 sur Windows 11 : `REG ADD "HK
 
 **Overclocker sa carte graphique :** l'overclocking permet d'augmenter la fréquence d'horloge de la carte graphique et ainsi avoir plus de performances en jeu. Cependant la température de la carte risque d'augmenter. Guide vidéo [ici](https://www.youtube.com/watch?v=64GJck-GWaM). Personnellement j'utilise [Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) et [Kombustor](https://msikombustor.com/). Kombustor permet de scanner le nombre d'artefacts (il faut cocher la case sur l'écran d'accueil et choisir la résolution de votre écran). Je considère qu'un overclocking est stable si la température de la carte graphique ne dépasse pas 85°C et que Kombustor ne détecte **aucun** artefact en minimum 10 minutes. Ensuite, essayer sur un jeu très gourmand en ressources pour vérifier que le système est stable sur la durée
 
-**Undervolter sa carte graphique :** l'undervolting permet de baisser la tension que reçoit la carte graphique et ainsi avoir de plus basses températures. Guide vidéo [ici](https://www.youtube.com/watch?v=ABWhmciIpe4). Comme pour l'overclocking, j'utilise personnellement [Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) et [Kombustor](https://msikombustor.com/)
+**Undervolter sa carte graphique :** l'undervolting permet de baisser la tension que reçoit la carte graphique et ainsi avoir de plus basses températures. Guide vidéo [ici](https://www.youtube.com/watch?v=ABWhmciIpe4). Comme pour l'overclocking, j'utilise Afterburner et Kombustor
 
-## Optionnel
+## 💡 Optionnel
 * Réinstaller Windows (Pro de préférence) complètement (avec une clé USB) avant d’appliquer ces manipulations pour partir sur une base saine
 * Toujours garder Windows et ses programmes à jour pour des raisons de sécurité, de stabilité et de compatibilité
 * Utiliser l'antivirus de Windows qui fait très bien son travail. Éviter Avast, Bitdefender...
-* Installer l'extension [uBlock Origin](https://ublockorigin.com/) pour le blocage des publicités et pisteurs, éviter d'installer d'autres extensions qui pourraient ralentir le navigateur
+* Préférer [Firefox](https://www.mozilla.org/fr/firefox/new/) à Chrome pour des raisons de vie privée
+* Installer l'extension [uBlock Origin](https://ublockorigin.com/) pour le blocage des publicités et pisteurs
 * Configurer votre navigateur pour bloquer les cookies tiers et utiliser HTTPS uniquement
-* Utiliser un DNS personnalisé (DoH, dans les paramètres Windows) comme [Quad9](https://www.quad9.net/fr/) ou [Mullvad](https://mullvad.net/fr/help/dns-over-https-and-dns-over-tls/) plutôt que celui du fournisseur local pour plus de sécurité et de vie privée
+* Utiliser un DNS personnalisé (DoH, dans les paramètres Windows) comme [Quad9](https://www.quad9.net/fr/) ou [Mullvad](https://mullvad.net/fr/help/dns-over-https-and-dns-over-tls/) plutôt que celui du fournisseur local pour des raisons de sécurité et de vie privée
 * Activer BitLocker avec TPM 2.0 sur Windows Pro pour chiffrer les données du lecteur et sécuriser vos fichiers (Clic droit sur un lecteur - Activer BitLocker)
 > **Warning** Veuillez à bien sauvegarder la clé de récupération BitLocker dans un cloud ou un disque externe !
-* Utiliser [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) pour contrôler tous vos composants RGB via un seul logiciel. Ainsi, on évite les logiciels comme Razer Synapse ou MSI Dragon Center qui consomment énormément de ressources en arrière-plan
+* Utiliser [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) pour contrôler tous vos composants RGB via un seul logiciel. Ainsi, on évite les logiciels comme Razer Synapse, ASUS Aura ou MSI Dragon Center qui consomment énormément de ressources en arrière-plan
 
-## Conclusion
+## 🎉 Conclusion
 Voilà ! Votre PC devrait être plus rapide et performant. Je recommande une réinstallation de Windows tous les ans en prenant le soin de faire des sauvegardes. Je déconseille d'autres manipulations qui pourraient endommager le système (ISO custom, scripts PowerShell, optimiseur de connexion Internet... ce sont très souvent des arnaques).
 
-### Sources
+### 🔗 Sources
 [Microsoft](https://learn.microsoft.com/en-us/windows/security/) | [Discord Entraide Informatique](https://discord.gg/WMsR7dT) | [Piwi](https://github.com/Piwielle) | [BlurBusters](https://blurbusters.com/) | [PrivacyGuides](https://privacyguides.org/)
