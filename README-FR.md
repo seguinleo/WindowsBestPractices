@@ -33,7 +33,7 @@ Une fois que tout est bien à jour et que l'ordinateur a été redémarré :
 
 > **Note** Pensez à éteindre votre ordinateur la nuit, ne le mettez pas en veille pour prévenir les bugs. Nettoyer aussi régulièrement votre PC de la poussière pour éviter aux composants de trop chauffer et donc de perdre en performances
 
-## 🛠️Pratiques avancées
+## 🔧Pratiques avancées
 Désinstaller un maximum d'applications Windows et logiciels que vous n'utilisez pas via le Panneau de configuration. N'utilisez pas d'outils comme Revo Uninstaller ou CCleaner qui peuvent désinstaller des applications système comme Edge ou le Store, ce qui va rendre le système instable
 
 Désactiver un maximum de programmes qui se lancent au démarrage de Windows (`Ctrl` + `Maj` + `Esc` - Démarrage)
