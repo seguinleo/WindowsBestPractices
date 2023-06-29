@@ -4,7 +4,7 @@
 
 [en](/README.md), [fr](/README-FR.md)
 
-Bonjour ! Voici des manipulations simples et saines pour un ordinateur fonctionnant sous Windows 10 ou 11. Elle permettent d'avoir un ordinateur plus performant pour la bureautique et les jeux vidéo. Ces manipulations sont sans risque et peuvent résoudre les lenteurs et crashs de votre ordinateur. Ces pratiques ne sont pas "magiques", je ne promets pas un gain incroyable, le plus efficace étant d'acheter de nouveaux composants plus performants. Lisez tout en entier avant de faire quoi que ce soit.
+Bonjour ! Voici des manipulations simples et saines pour un ordinateur fonctionnant sous Windows 10 ou 11. Elles permettent d'avoir un ordinateur plus performant pour la bureautique et les jeux vidéo. Ces manipulations sont sans risque et peuvent résoudre les lenteurs et crashs de votre ordinateur. Ces pratiques ne sont pas "magiques", je ne promets pas un gain incroyable, le plus efficace étant d'acheter de nouveaux composants plus performants. Lisez tout en entier avant de faire quoi que ce soit.
 
 ## Table des matières
 - [Pratiques rapides](#pratiques-rapides)
