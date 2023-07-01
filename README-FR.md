@@ -1,7 +1,5 @@
 # WindowsBestPractices
 
-![img](https://repository-images.githubusercontent.com/540623246/8acc5ef0-1f81-4ab5-96f2-3aa5ef0a2c45)
-
 [en](/README.md), [fr](/README-FR.md)
 
 Bonjour ! Voici des manipulations simples et saines pour un ordinateur fonctionnant sous Windows 10 ou 11. Elles permettent d'avoir un ordinateur plus performant pour la bureautique et les jeux vidéo. Ces manipulations sont sans risque et peuvent résoudre les lenteurs et crashs de votre ordinateur. Ces pratiques ne sont pas "magiques", je ne promets pas un gain incroyable, le plus efficace étant d'acheter de nouveaux composants plus performants. Lisez tout en entier avant de faire quoi que ce soit.
@@ -34,7 +32,7 @@ Une fois que tout est bien à jour et que l'ordinateur a été redémarré :
 > **Note** Pensez à éteindre votre ordinateur la nuit, ne le mettez pas en veille pour prévenir les bugs. Nettoyer aussi régulièrement votre PC de la poussière pour éviter aux composants de trop chauffer et donc de perdre en performances
 
 ## 🔧Pratiques avancées
-Désinstaller un maximum d'applications Windows et logiciels que vous n'utilisez pas via le Panneau de configuration. N'utilisez pas d'outils comme Revo Uninstaller ou CCleaner qui peuvent désinstaller des applications système comme Edge ou le Store, ce qui va rendre le système instable
+Désinstaller un maximum d'applications Windows et logiciels que vous n'utilisez pas via le Panneau de configuration. Ne jamais désinstaller les applications système comme Edge ou le Store, ce qui va rendre le système instable
 
 Désactiver un maximum de programmes qui se lancent au démarrage de Windows (`Ctrl` + `Maj` + `Esc` - Démarrage)
 
@@ -43,7 +41,7 @@ Désactiver les Widgets sur Windows 11 : `REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\P
 Décocher "Améliorer la précision du pointeur" pour éviter l'accélération de la souris (Panneau de configuration - Matériels - Souris - Options du pointeur)
 
 Désactiver le fast boot et la mise en veille prolongée pour libérer de la place sur le lecteur (~3Go) et prévenir les bugs, avec ces **deux** commandes : `REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 00000000 /f` + `powercfg -h off` - Redémarrer le PC | Pour annuler : `REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 00000001 /f` + `powercfg -h on`
-> **Note** Désactiver le fast boot va rendre le démarrage de votre PC un peu plus long, cependant votre ordinateur s'arrêtera réellement quand vous l'éteignerez, ce qui rendra le système plus stable et évitera les bugs
+> **Note** Désactiver le fast boot va rendre le démarrage de votre PC un petit peu plus long, cependant votre ordinateur s'arrêtera réellement, ce qui rendra le système plus stable et évitera les bugs
 
 Décocher un maximum de cases dans la section "Confidentialité" dans les paramètres Windows pour limiter la collecte de données personnelles par Microsoft (données de diagnostic, localisation, contacts...)
 
@@ -66,10 +64,12 @@ Pour une utilisation gaming, Microsoft recommande de désactiver l'intégrité d
 **Modifications du panneau Nvidia/AMD :**
 * Sélectionner la plus grande fréquence de rafraîchissement possible (144Hz, 180Hz...)
 * Choisir la plus grande intensité/profondeur de couleur possible (8bpc, 10bpc...)
-* Activer G-SYNC/FreeSync + V-SYNC + limiter les IPS à 2 en dessous de la fréquence de rafraîchissement de l’écran pour éviter les déchirures d’images (écran 144Hz → limite à 142FPS)
+* Activer G-SYNC/FreeSync + V-SYNC + bloquer les IPS à 3 en dessous de la fréquence de rafraîchissement de l’écran pour éviter les déchirures d’images (écran 144Hz → bloquer à 141FPS)
 * Spécifique Nvidia : choisir la plage dynamique "complète" dans l'onglet couleurs vidéo, sélectionner "Utiliser les paramètres d’images 3D avancés", dans ces paramètres -> mode de faible latence sur "Activé", privilégier les performances maximales
-* Spécifique AMD : activer Radeon Anti-Lag et Radeon Chill
-> **Warning** Si vous activez la V-SYNC dans le panneau Nvidia/AMD, il faut la désactiver dans les paramètres de tous vos jeux pour éviter des conflits !
+* Spécifique AMD : il est préférable de bloquer les FPS via [RTSS](https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html) plutôt que via le panneau AMD pour une latence plus basse
+> **Warning** Si vous activez la V-SYNC dans le panneau Nvidia/AMD, il faut la désactiver dans les paramètres de tous vos jeux pour éviter des conflits
+
+> **Note** Pour les jeux qui permettent de bloquer les FPS, il est préférable de le faire dans les paramètres du jeu plutôt que dans le panneau Nvidia/RTSS pour une latence plus basse
 
 **Overclocker sa carte graphique :** l'overclocking permet d'augmenter la fréquence d'horloge de la carte graphique et ainsi avoir plus de performances en jeu. Cependant la température de la carte risque d'augmenter. Guide vidéo [ici](https://www.youtube.com/watch?v=64GJck-GWaM). Personnellement j'utilise [Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) et [Kombustor](https://msikombustor.com/). Kombustor permet de scanner le nombre d'artefacts (il faut cocher la case sur l'écran d'accueil et choisir la résolution de votre écran). Je considère qu'un overclocking est stable si la température de la carte graphique ne dépasse pas 85°C et que Kombustor ne détecte **aucun** artefact en minimum 10 minutes. Ensuite, essayer sur un jeu très gourmand en ressources pour vérifier que le système est stable sur la durée
 
@@ -80,7 +80,7 @@ Pour une utilisation gaming, Microsoft recommande de désactiver l'intégrité d
 * Toujours garder Windows et ses programmes à jour pour des raisons de sécurité et de stabilité
 * Utiliser l'antivirus de Windows qui fait très bien son travail. Éviter Avast, Bitdefender...
 * Préférer [Firefox](https://www.mozilla.org/fr/firefox/new/) à Chrome pour des raisons de vie privée, configurer le pour bloquer les cookies tiers et utiliser HTTPS uniquement
-* Installer l'extension [uBlock Origin](https://ublockorigin.com/) pour le blocage des publicités et pisteurs. Éviter Adblock Plus
+* Installer l'extension [uBlock Origin](https://ublockorigin.com/) pour le blocage des publicités et pisteurs. Évitez toute autre extension Adblock
 * Utiliser un DNS personnalisé (DoH, dans les paramètres Windows) comme [Quad9](https://www.quad9.net/fr/) ou [Mullvad](https://mullvad.net/fr/help/dns-over-https-and-dns-over-tls/) plutôt que celui du fournisseur local pour des raisons de sécurité et de vie privée
 * Activer BitLocker sur votre PC portable pour chiffrer les données du lecteur et sécuriser vos fichiers (Clic droit sur un lecteur - Activer BitLocker)
 > **Warning** Veuillez à bien sauvegarder la clé de récupération BitLocker dans un cloud ou un disque externe !

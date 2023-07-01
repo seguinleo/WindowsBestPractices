@@ -1,7 +1,5 @@
 # WindowsBestPractices
 
-![img](https://repository-images.githubusercontent.com/540623246/8acc5ef0-1f81-4ab5-96f2-3aa5ef0a2c45)
-
 [en](/README.md), [fr](/README-FR.md)
 
 Hello! Here are simple and healthy manipulations for a PC running Windows 10 or 11. This allow you to have a more powerful PC for office and video games. These manipulations are without risk and can solve the slowness and crashes of your PC. These practices are not "magic", I do not promise an incredible gain, the most effective being to buy new and more efficient components. Read everything before doing anything.
@@ -34,7 +32,7 @@ Once everything is up to date and the PC has been restarted:
 > **Note** Remember to turn off your computer at night, do not put it to sleep to avoid bugs. Also regularly clean your PC of dust to avoid components from overheating and therefore losing performance
 
 ## 🔧Advanced practices
-Uninstall a maximum of Windows applications and software that you do not use via the Control Panel. Do not use tools like Revo Uninstaller or CCleaner which can uninstall system apps like Edge or Store which will make the system unstable
+Uninstall a maximum of Windows applications and software that you do not use via the Control Panel. Never uninstall system apps like Edge or Store, which will make the system unstable
 
 Disable as many programs as possible that launch at Windows startup (`Ctrl` + `Maj` + `Esc` - Startup)
 
@@ -66,10 +64,12 @@ For gaming use, Microsoft recommends disabling Memory Integrity and Virtual Mach
 **Nvidia/AMD panel changes:**
 * Select the highest possible refresh rate (144Hz, 180Hz...)
 * Choose the highest possible color intensity/depth (8bpc, 10bpc...)
-* Enable G-SYNC/FreeSync + V-SYNC + limit FPS to 2 below screen refresh rate to avoid frame tearing (144Hz screen → limit to 142FPS)
+* Enable G-SYNC/FreeSync + V-SYNC + lock FPS to 3 below screen refresh rate to avoid frame tearing (144Hz screen → lock to 141FPS)
 * Nvidia specific: choose "full" dynamic range in the video colors tab, select "Use advanced 3D image settings", in these settings -> low latency mode on "On", prefer maximum performance
-* AMD specific: enable Radeon Anti-Lag and Radeon Chill
-> **Warning** If you enable V-SYNC in the Nvidia/AMD panel, you must disable it in the settings of all your games to avoid conflicts!
+* AMD specific: it is better to lock FPS via [RTSS](https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html) rather than AMD panel for lower latency
+> **Warning** If you enable V-SYNC in the Nvidia/AMD panel, you must disable it in-game to avoid conflicts
+
+> **Note** For games that allow FPS locking, it's better to lock the FPS in-game rather than the Nvidia/RTSS panel for lower latency
 
 **Overclock your graphics card:** overclocking allows you to increase the clock frequency of your graphics card and thus have more performance in games. However, the temperature of the card may increase. Video guide [here](https://www.youtube.com/watch?v=6_Me603fnq8). Personally I use [Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) and [Kombustor](https://msikombustor.com/). Kombustor allows you to scan the number of artifacts (you have to check the box on the welcome screen and choose your screen resolution). I consider an overclock to be stable if the temperature of the graphics card does not exceed 85°C/185°F and Kombustor detects **no** artifacts in at least 10 minutes. Then, try on a very resource-intensive game to verify that the system is stable over time
 
@@ -80,7 +80,7 @@ For gaming use, Microsoft recommends disabling Memory Integrity and Virtual Mach
 * Always keep Windows and its programs up-to-date for security and stability reasons
 * Use the Windows antivirus which does its job very well. Avoid Avast, Bitdefender...
 * Prefer [Firefox](https://www.mozilla.org/en-US/firefox/new/) to Chrome for privacy reasons, configure it to block third-party cookies and use HTTPS only
-* Install [uBlock Origin](https://ublockorigin.com/) extension for blocking ads and trackers. Avoid Adblock Plus
+* Install [uBlock Origin](https://ublockorigin.com/) extension for blocking ads and trackers. Avoid any other Adblock extension
 * Use a custom DNS (DoH, in Windows settings) like [Quad9](https://www.quad9.net) or [Mullvad](https://mullvad.net/fr/help/dns-over-https-and-dns-over-tls/) rather than that of the local provider for security and privacy reasons
 * Enable BitLocker on your laptop to encrypt drive data and secure your files (Right click on a drive - Enable BitLocker)
 > **Warning** Be sure to back up the BitLocker recovery key to a cloud or an external drive!
