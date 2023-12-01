@@ -1,6 +1,5 @@
 # WindowsBestPractices
 
-![banner](https://repository-images.githubusercontent.com/540623246/8acc5ef0-1f81-4ab5-96f2-3aa5ef0a2c45)
 ![Last-Commit](https://img.shields.io/github/last-commit/PouletEnSlip/WindowsBestPractices)
 
 [en](/README.md), [fr](/README-FR.md)
@@ -16,13 +15,11 @@ Hello! Here are simple and healthy manipulations for a PC running Windows 10 or 
 
 ## 🧹Quick practices
 In order, to be repeated approximately once a month:
-* Delete your browser history, cache and cookies
-* Update the BIOS and drivers **via your motherboard's website**. Avoid CCleaner, Driverscloud or DriverBooster, these utilities may install outdated or non-compatible drivers with your components
-* Update the drivers for your [Nvidia](https://www.nvidia.com/Download/index.aspx?lang=en-us) or [AMD](https://www.amd.com/en/support) graphics card, use [DDU](https://www.guru3d.com/files-details/display-driver-uninstaller-download.html) to remove old drivers properly. DDU is **essential** because it allows you to fix crashes and performance issues on your games. Activate the [Message Signaled Interrupts](https://www.mediafire.com/file/ewpy1p0rr132thk/MSI_util_v3.zip) **only for graphics card** (enabled by default on AMD graphics card), it will have to be reactivated after each drivers update
+* Update the drivers for your [Nvidia](https://www.nvidia.com/Download/index.aspx?lang=en-us) or [AMD](https://www.amd.com/en/support) graphics card, use [DDU](https://www.guru3d.com/files-details/display-driver-uninstaller-download.html) to remove old drivers properly. DDU is **essential** because it allows you to fix crashes and performance issues on your games
 * Update Windows via Windows Update in settings
-* Update all your softwares
 
 Once everything is up to date and the PC has been restarted:
+* Delete your browser history, cache and cookies
 * Delete Windows Update files (`C:/Windows/SoftwareDistribution/Download/` - Delete all folders inside to avoid errors during future updates)
 * Delete all temporary files (`Windows` + `R` - Type "%temp%" - Delete all)
 * Repair system files: `sfc /scannow`
@@ -36,6 +33,8 @@ Once everything is up to date and the PC has been restarted:
 > Remember to turn off your computer at night, do not put it to sleep to avoid bugs. Also regularly clean your PC of dust to avoid components from overheating and therefore losing performance
 
 ## 🔧Advanced practices
+Update the BIOS and drivers **via your motherboard's website**. Avoid CCleaner, Driverscloud or DriverBooster, these utilities may install outdated or non-compatible drivers with your components
+
 Uninstall as many unused Windows applications and software as possible through the Control Panel. Never uninstall system applications like Microsoft Edge, Windows Security, or the Store to avoid instability in the system
 
 Disable as many programs as possible that launch at Windows startup (`Ctrl` + `Maj` + `Esc` - Startup)
@@ -52,7 +51,7 @@ Uncheck as many boxes as possible in the "Privacy" section in Windows settings t
 
 Install **all** versions of [Visual C++](https://www.techpowerup.com/download/visual-c-redistributable-runtime-package-all-in-one/) to avoid missing DLL errors
 
-Disable Xbox Game Bar if you don't use it, with these **three** commands: `Get-AppxPackage Microsoft.XboxGamingOverlay | Remove-AppxPackage` + `REG ADD "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR" /v AppCaptureEnabled /t REG_DWORD /d 00000000 /f` + `REG ADD "HKEY_CURRENT_USER\System\GameConfigStore" /v GameDVR_Enabled /t REG_DWORD /d 00000000 /f` - Restart PC | To cancel: `Get-AppxPackage -allusers *Microsoft.XboxGamingOverlay* | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register “$($_.InstallLocation)\AppXManifest.xml”}` + `REG ADD "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR" /v AppCaptureEnabled /t REG_DWORD /d 00000001 /f` + `REG ADD "HKEY_CURRENT_USER\System\GameConfigStore" /v GameDVR_Enabled /t REG_DWORD /d 00000001 /f`
+Disable persistent Xbox Game Bar recording that takes up resources in the background, with these **two** commands: `REG ADD "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR" /v AppCaptureEnabled /t REG_DWORD /d 00000000 /f` + `REG ADD "HKEY_CURRENT_USER\System\GameConfigStore" /v GameDVR_Enabled /t REG_DWORD /d 00000000 /f` - Restart PC | To cancel: `REG ADD "HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\GameDVR" /v AppCaptureEnabled /t REG_DWORD /d 00000001 /f` + `REG ADD "HKEY_CURRENT_USER\System\GameConfigStore" /v GameDVR_Enabled /t REG_DWORD /d 00000001 /f`
 
 Disable Bing results in Windows Search: `REG ADD "HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v DisableSearchBoxSuggestions /t REG_DWORD /d 00000001 /f` - Restart PC | To cancel: `REG ADD "HKEY_CURRENT_USER\SOFTWARE\Policies\Microsoft\Windows\Explorer" /v DisableSearchBoxSuggestions /t REG_DWORD /d 00000000 /f`
 
@@ -64,7 +63,7 @@ For gaming use, Microsoft recommends disabling Memory Integrity and Virtual Mach
 * Intel CPU: choose "High performance"
 * AMD Ryzen 1000, 2000, 3000 and 4000 CPU: choose "AMD Ryzen Balanced"
 * AMD Ryzen 5000 CPU and newer: choose "Balanced"
-* In advanced plan settings: turn off hard disk after 0min (never) and disable USB selective suspend
+* In advanced plan settings: disable USB selective suspend
 
 **Nvidia/AMD panel changes:**
 * Select the highest possible refresh rate (144Hz, 180Hz...)
@@ -78,9 +77,7 @@ For gaming use, Microsoft recommends disabling Memory Integrity and Virtual Mach
 > [!NOTE]
 > For games that allow FPS locking, it's better to lock the FPS in-game rather than the Nvidia/RTSS panel for lower latency
 
-**Overclock your graphics card:** overclocking allows you to increase the clock frequency of your graphics card and thus have more performance in games. However, the temperature of the card may increase. Video guide [here](https://www.youtube.com/watch?v=6_Me603fnq8). Personally I use [Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) and [Kombustor](https://msikombustor.com/). Kombustor allows you to scan the number of artifacts (you have to check the box on the welcome screen and choose your screen resolution). I consider an overclock to be stable if the temperature of the graphics card does not exceed 85°C/185°F and Kombustor detects **no** artifacts in at least 10 minutes. Then, try on a very resource-intensive game to verify that the system is stable over time
-
-**Undervolt your graphics card:** undervolting allows you to lower the voltage received by the graphics card and thus have lower temperatures. Video guide [here](https://www.youtube.com/watch?v=eaVp6vcVIts). Just like overclocking, I use Afterburner and Kombustor. Undervolting your graphics card after overclocking it allows for increased performance while reducing temperature and power consumption, provided that stability is carefully checked afterward
+Use [MPO-GPU-FIX](https://github.com/RedDot-3ND7355/MPO-GPU-FIX) to disable MPO (Multi-Plane Overlay) which can cause performance and stability issues in games
 
 ## 💡Optional
 * Reinstall Windows (preferably Pro) completely (using a USB key, not through the settings) before applying these manipulations to start with a clean system. During the Windows installation, do not sign in with your Microsoft account, create a local account to limit data collection
@@ -90,11 +87,12 @@ For gaming use, Microsoft recommends disabling Memory Integrity and Virtual Mach
 * Prefer [Firefox](https://www.mozilla.org/en-US/firefox/new/) to Chrome for privacy reasons, configure it to block third-party cookies and use HTTPS only
 * Install [uBlock Origin](https://ublockorigin.com/) extension for blocking ads and trackers. Avoid any other adblockers and try to limit the number of installed extensions
 * Use a custom DNS (DoH, in Windows settings) like [Quad9](https://www.quad9.net) or [Mullvad](https://mullvad.net/fr/help/dns-over-https-and-dns-over-tls/) rather than that of the local provider for security and privacy reasons
-* The only free VPN that I recommend is [ProtonVPN](https://protonvpn.com) for privacy reasons. The best paid VPN, in my opinion, is [Mullvad](https://mullvad.net) for the same reasons
-* Enable BitLocker on your laptop to encrypt drive data and secure your files (Right click on a drive - Enable BitLocker). BitLocker does not have a significant impact on performance
+* A good free VPN that I recommend is [ProtonVPN](https://protonvpn.com/) for privacy reasons. Or a paid VPN like [Mullvad](https://mullvad.net/en) for the same reasons
+* Enable BitLocker on your laptop to encrypt drive data and secure your files (Right click on a drive - Enable BitLocker)
 > [!WARNING]
 > Be sure to back up the BitLocker recovery key to a cloud or an external drive!
 * Use [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) to control all your RGB components through a single software. Thus, we avoid software like Razer Synapse, ASUS Aura or MSI Dragon Center which use resources in the background
+* Going further, you can think about overclocking and undervolting your GPU, but be sure of what you are doing. Personally I use [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) and [Kombustor](https://msikombustor.com/) to test the stability of my system. I consider that a GPU seems stable if its temperature does not exceed 85°C/185°F and that Kombustor does not detect **any** artifacts in at least 10 minutes
 
 ## 🎉Conclusion
 That's it! Your PC should be faster and more efficient. I recommend reinstalling Windows every year, taking care to make backups. I advise against other manipulations which could damage the system (custom ISO, PowerShell scripts, Internet connection optimizer... these are scams).
