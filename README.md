@@ -1,10 +1,8 @@
 # WindowsBestPractices
 
-![Last-Commit](https://img.shields.io/github/last-commit/PouletEnSlip/WindowsBestPractices)
-
 [en](/README.md), [fr](/README-FR.md)
 
-Hello! Here are simple and healthy manipulations for a PC running Windows 10 or 11. This allow you to have a more powerful PC for office and video games. These manipulations are without risk and can solve the slowness and crashes of your PC. These practices are not "magic", I do not promise an incredible gain, the most effective being to buy new and more efficient components. Read everything before doing anything.
+Hello! Here are simple and healthy manipulations for a PC running Windows 10 or 11. This allow you to have a more responsive PC for office and video games. These manipulations are without risk and can solve the slowness and crashes of your PC. These practices are not "magic", I do not promise an incredible gain, the most effective being to buy new and more efficient components. Read everything before doing anything.
 
 ## 📖 Table of contents
 - [Quick practices](#quick-practices)
@@ -14,11 +12,12 @@ Hello! Here are simple and healthy manipulations for a PC running Windows 10 or 
 - [Sources](#sources)
 
 ## 🧹Quick practices
-In order, to be repeated approximately once a month:
+### In order, to be repeated approximately once a month
 * Update the drivers for your [Nvidia](https://www.nvidia.com/Download/index.aspx?lang=en-us) or [AMD](https://www.amd.com/en/support) graphics card, use [DDU](https://www.guru3d.com/files-details/display-driver-uninstaller-download.html) to remove old drivers properly. DDU is **essential** because it allows you to fix crashes and performance issues on your games
 * Update Windows via Windows Update in settings
 
-Once everything is up to date and the PC has been restarted:
+Once everything is up to date and the PC has been restarted
+
 * Delete your browser history, cache and cookies
 * Delete Windows Update files (`C:/Windows/SoftwareDistribution/Download/` - Delete all folders inside to avoid errors during future updates)
 * Delete all temporary files (`Windows` + `R` - Type "%temp%" - Delete all)
@@ -30,12 +29,11 @@ Once everything is up to date and the PC has been restarted:
 * Optimize all drives (Right click on a drive - Properties - Tools - Optimize)
 
 ## 🔧Advanced practices
+First of all, I recommend the Pro edition of Windows for more features and control over the system
+
 Update the BIOS and drivers **via your motherboard's website**. Avoid CCleaner, Driverscloud or DriverBooster, these utilities may install outdated or non-compatible drivers with your components
 
-Uninstall as many unused software as possible through the Control Panel
-
-> [!CAUTION]
-> Never uninstall system applications like Microsoft Edge or Microsoft Store, this could cause huge damage to your system
+Install only essential programs to avoid system slowdowns and bugs
 
 Disable as many programs as possible that launch at Windows startup (`Ctrl` + `Maj` + `Esc` - Startup)
 
@@ -63,6 +61,7 @@ Bring old Windows 10 context menu back on Windows 11: `REG ADD "HKCU\Software\Cl
 For gaming use, Microsoft recommends disabling Memory Integrity and Virtual Machine Platform [here](https://support.microsoft.com/en-us/windows/options-to-optimize-gaming-performance-in-windows-11-a255f612-2949-4373-a566-ff6f3f474613)
 
 **Microsoft Edge:**
+* I do not recommend using Microsoft Edge for privacy reasons, prefer Firefox
 * Disable fast startup and background running in "System and performance" tab
 * Disable data sharing with other Windows features in the "Profiles" tab
 * Select "Strict" Tracking Protection in the "Privacy, search & services" tab
@@ -99,12 +98,10 @@ Use [MPO-GPU-FIX](https://github.com/RedDot-3ND7355/MPO-GPU-FIX) to disable MPO 
 * Use a custom DNS (DoH, in Windows settings) like [Quad9](https://www.quad9.net) or [Mullvad](https://mullvad.net/fr/help/dns-over-https-and-dns-over-tls/) rather than that of the local provider for security and privacy reasons
 * A good free VPN that I recommend is [ProtonVPN](https://protonvpn.com/) for privacy reasons. Or a paid VPN like [Mullvad](https://mullvad.net/en) for the same reasons
 * Enable BitLocker on your laptop to encrypt drive data and secure your files (Right click on a drive - Enable BitLocker)
-* Turn off the computer at night, do not put it to sleep to prevent bugs. Also regularly clean the PC of dust to prevent the components from heating up too much and therefore losing performance
-* Activate night lighting in the evening to avoid eye fatigue
-
 > [!WARNING]
 > Be sure to back up the BitLocker recovery key to a cloud or an external drive!
-
+* Turn off the computer at night, do not put it to sleep to prevent bugs. Also regularly clean the PC of dust to prevent the components from heating up too much and therefore losing performance
+* Activate night lighting in the evening to avoid eye fatigue
 * Use [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) to control all your RGB components through a single software. Thus, we avoid software like Razer Synapse, ASUS Aura or MSI Dragon Center which use resources in the background
 * Going further, you can think about overclocking and undervolting your GPU, but be sure of what you are doing. Personally I use [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) and [Kombustor](https://msikombustor.com/) to test the stability of my system. I consider that a GPU seems stable if its temperature does not exceed 85°C/185°F and that Kombustor does not detect **any** artifacts in at least 10 minutes
 

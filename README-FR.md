@@ -1,10 +1,8 @@
 # WindowsBestPractices
 
-![Last-Commit](https://img.shields.io/github/last-commit/PouletEnSlip/WindowsBestPractices)
-
 [en](/README.md), [fr](/README-FR.md)
 
-Bonjour ! Voici des manipulations simples et saines pour un ordinateur fonctionnant sous Windows 10 ou 11. Elles permettent d'avoir un ordinateur plus performant pour la bureautique et les jeux vidéo. Ces manipulations sont sans risque et peuvent résoudre les lenteurs et crashs de votre ordinateur. Ces pratiques ne sont pas "magiques", je ne promets pas un gain incroyable, le plus efficace étant d'acheter de nouveaux composants plus performants. Lire tout en entier avant de faire quoi que ce soit.
+Bonjour ! Voici des manipulations simples et saines pour un ordinateur fonctionnant sous Windows 10 ou 11. Elles permettent d'avoir un ordinateur plus réactif pour la bureautique et les jeux vidéo. Ces manipulations sont sans risque et peuvent résoudre les lenteurs et crashs de votre ordinateur. Ces pratiques ne sont pas "magiques", je ne promets pas un gain incroyable, le plus efficace étant d'acheter de nouveaux composants plus performants. Lire tout en entier avant de faire quoi que ce soit.
 
 ## 📖 Sommaire
 - [Pratiques rapides](#pratiques-rapides)
@@ -14,11 +12,12 @@ Bonjour ! Voici des manipulations simples et saines pour un ordinateur fonctionn
 - [Sources](#sources)
 
 ## 🧹Pratiques rapides
-Dans l'ordre, à répéter 1 fois par mois environ :
+### Dans l'ordre, à répéter 1 fois par mois environ
 * Mettre à jour les drivers de votre carte graphique [Nvidia](https://www.nvidia.fr/Download/index.aspx?lang=fr) ou [AMD](https://www.amd.com/fr/support), utiliser [DDU](https://www.guru3d.com/files-details/display-driver-uninstaller-download.html) pour supprimer les anciens divers proprement. DDU est **indispensable** car il permet de corriger les crashs et pertes de performance sur vos jeux
 * Mettre Windows à jour via Windows Update dans les paramètres
 
-Une fois que tout est bien à jour et que l'ordinateur a été redémarré :
+Une fois que tout est bien à jour et que l'ordinateur a été redémarré
+
 * Supprimer l'historique, le cache et les cookies du navigateur
 * Supprimer les fichiers de Windows Update (`C:/Windows/SoftwareDistribution/Download/` - Supprimer tous les dossiers à l'intérieur pour éviter des erreurs lors des prochaines mises à jour)
 * Supprimer tous les fichiers temporaires (`Windows` + `R` - Taper "%temp%" - Tout supprimer)
@@ -30,12 +29,11 @@ Une fois que tout est bien à jour et que l'ordinateur a été redémarré :
 * Optimiser tous les lecteurs (Clic droit sur un lecteur - Propriétés - Outils - Optimiser)
 
 ## 🔧Pratiques avancées
+Avant toute chose, je recommande l'édition Pro de Windows pour plus de fonctionnalités et de contrôle sur le système
+
 Mettre le BIOS et les drivers à jour **via le site de votre carte mère**. Éviter CCleaner, Driverscloud ou DriverBooster, ces utilitaires peuvent installer des drivers obsolètes ou non compatibles avec vos composants
 
-Désinstaller un maximum de logiciels via le Panneau de configuration
-
-> [!CAUTION]
-> Ne jamais désinstaller les applications système comme Microsoft Edge ou Microsoft Store, cela pourrait causer d'énormes dégâts à votre système
+Installer uniquement les programmes essentiels pour éviter les ralentissements et les bugs du système
 
 Désactiver un maximum de programmes qui se lancent au démarrage de Windows (`Ctrl` + `Maj` + `Esc` - Démarrage)
 
@@ -63,6 +61,7 @@ Remettre l'ancien menu du clic droit de Windows 10 sur Windows 11 : `REG ADD "HK
 Pour une utilisation gaming, Microsoft recommande de désactiver l'intégrité de la mémoire et la plateforme de machines virtuelles [ici](https://support.microsoft.com/fr-fr/windows/options-pour-optimiser-les-performances-des-jeux-dans-windows-11-a255f612-2949-4373-a566-ff6f3f474613)
 
 **Microsoft Edge :**
+* Je déconseille l'utilisation de Microsoft Edge pour des raisons de vie privée, préférer Firefox
 * Désactiver le démarrage rapide et l'exécution en arrière-plan dans l'onglet "Système et performances"
 * Désactiver le partage de données avec d'autres fonctionnalités Windows dans l'onglet "Profils"
 * Sélectionner Protection contre le suivi "Strict" dans l'onglet "Confidentialité, recherche et services"
@@ -90,7 +89,7 @@ Pour une utilisation gaming, Microsoft recommande de désactiver l'intégrité d
 Utiliser [MPO-GPU-FIX](https://github.com/RedDot-3ND7355/MPO-GPU-FIX) pour désactiver le MPO (Multi-Plane Overlay) qui peut causer des problèmes de performances et de stabilité dans les jeux
 
 ## 💡Conseils
-* Réinstaller Windows (Pro de préférence) complètement (avec une clé USB, pas via les paramètres) avant d'appliquer ces manipulations pour partir sur une base saine. Lors de l'installation de Windows, ne pas se connecter à son compte Microsoft, créer un compte local pour limiter la collecte de données
+* Réinstaller Windows complètement (avec une clé USB, pas via les paramètres) avant d'appliquer ces manipulations pour partir sur une base saine. Lors de l'installation de Windows, ne pas se connecter à son compte Microsoft, créer un compte local pour limiter la collecte de données
 * Si vous pensez avoir un virus, installez [Malwarebytes](https://downloads.malwarebytes.com/file/mb4_offline) et effectuez un scan pour supprimer les menaces. Cependant, le plus efficace est de réinstaller Windows comme ci-dessus
 * Utiliser l'antivirus de Windows qui fait très bien son travail. Éviter Avast, Bitdefender...
 * Toujours garder Windows et ses programmes à jour pour des raisons de sécurité et de stabilité, notamment le navigateur
@@ -99,12 +98,10 @@ Utiliser [MPO-GPU-FIX](https://github.com/RedDot-3ND7355/MPO-GPU-FIX) pour désa
 * Utiliser un DNS personnalisé (DoH, dans les paramètres Windows) comme [Quad9](https://www.quad9.net/fr/) ou [Mullvad](https://mullvad.net/fr/help/dns-over-https-and-dns-over-tls/) plutôt que celui du fournisseur local pour des raisons de sécurité et de vie privée
 * Un bon VPN gratuit que je recommande est [ProtonVPN](https://protonvpn.com/fr) pour des raisons de vie privée. Ou un VPN payant comme [Mullvad](https://mullvad.net/fr) pour les mêmes raisons
 * Activer BitLocker sur votre PC portable pour chiffrer les données du lecteur et sécuriser vos fichiers (Clic droit sur un lecteur - Activer BitLocker)
-* Éteindre l'ordinateur la nuit, ne pas le mettre en veille pour prévenir les bugs. Nettoyer aussi régulièrement le PC de la poussière pour éviter aux composants de trop chauffer et donc de perdre en performances
-* Activer l'éclairage nocturne le soir pour éviter la fatigue oculaire
-
 > [!WARNING]
 > Veuillez à bien sauvegarder la clé de récupération BitLocker dans un cloud ou un disque externe !
-
+* Éteindre l'ordinateur la nuit, ne pas le mettre en veille pour prévenir les bugs. Nettoyer aussi régulièrement le PC de la poussière pour éviter aux composants de trop chauffer et donc de perdre en performances
+* Activer l'éclairage nocturne le soir pour éviter la fatigue oculaire
 * Utiliser [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) pour contrôler tous vos composants RGB via un seul logiciel. Ainsi, on évite les logiciels comme Razer Synapse, ASUS Aura ou MSI Dragon Center qui consomment des ressources en arrière-plan
 * Pour aller plus loin, vous pouvez penser à overclocker et undervolter votre GPU, mais soyez sûr de ce que vous faites. Personnellement j'utilise [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) et [Kombustor](https://msikombustor.com/) pour tester la stabilité de mon système. Je considère qu'un GPU semble stable si sa température ne dépasse pas 85°C et que Kombustor ne détecte **aucun** artefact en au moins 10 minutes
 
