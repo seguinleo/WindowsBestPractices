@@ -50,7 +50,7 @@ Décochez "Améliorer la précision du pointeur" pour désactiver l'accélérati
 Désactivez le fast boot et la mise en veille prolongée pour libérer de la place sur le lecteur (~3Go) et prévenir des potentiels bugs, avec ces **deux** commandes : `REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 00000000 /f` + `powercfg -h off` - Redémarrer le PC | Pour annuler : `REG ADD "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Power" /v HiberbootEnabled /t REG_DWORD /d 00000001 /f` + `powercfg -h on`
 
 > [!NOTE]
-> Désactivez le fast boot va rendre le démarrage de votre PC un petit peu plus long (1-2s), cependant votre ordinateur s'arrêtera réellement, ce qui rendra le système plus stable.
+> Désactiver le fast boot va rendre le démarrage de votre PC un petit peu plus long (1-2s), cependant votre ordinateur s'arrêtera réellement, ce qui rendra le système plus stable.
 
 Décochez un maximum d'options dans la section "Confidentialité" dans les paramètres Windows pour limiter la collecte de données personnelles par Microsoft (ID publicitaire, données de diagnostic, localisation, contacts...)
 
@@ -76,7 +76,7 @@ Pour une utilisation gaming, Microsoft recommande de désactiver l'intégrité d
 > [!NOTE]
 > Pour les jeux qui permettent de bloquer les FPS, il est préférable de le faire dans les paramètres du jeu plutôt que dans le panneau Nvidia/RTSS pour une latence plus basse
 
-Utilisez [MPO-GPU-FIX](https://github.com/RedDot-3ND7355/MPO-GPU-FIX) pour désactivez le MPO (Multi-Plane Overlay) qui peut causer des problèmes de performances et de stabilité dans les jeux
+Utilisez [MPO-GPU-FIX](https://github.com/RedDot-3ND7355/MPO-GPU-FIX) pour désactiver le MPO (Multi-Plane Overlay) qui peut causer des problèmes de performances et de stabilité dans les jeux
 
 Pour aller plus loin et pour un usage gaming uniquement, vous pouvez penser à overclocker/undervolter votre GPU, mais renseignez-vous et soyez sûr de ce que vous faites. Personnellement j'utilise [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) et [Kombustor](https://msikombustor.com/) pour tester la stabilité de mon système. Je considère qu'un GPU semble stable si sa température ne dépasse pas 85°C et que Kombustor ne détecte **aucun** artefact en au moins 10 minutes
 
