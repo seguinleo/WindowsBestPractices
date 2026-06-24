@@ -2,11 +2,12 @@
 
 [en](/README.md), [fr](/README-FR.md)
 
-Voici des manipulations simples et saines pour un ordinateur fonctionnant sous Windows 10 ou 11. Elles permettent d'avoir un ordinateur plus réactif pour la bureautique et les jeux vidéo. Ce guide est efficace pour résoudre les bugs, les lenteurs et les crashs de votre ordinateur. Ces pratiques ne sont pas "magiques", je ne promets pas un gain incroyable niveau performances, le plus efficace restant d'acheter des composants plus performants.
+Voici des manipulations simples et saines pour un ordinateur fonctionnant sous Windows 10 ou 11. Elles permettent d'avoir un ordinateur plus réactif pour la bureautique et les jeux vidéo. Ce guide est efficace pour résoudre les bugs, les lenteurs et les crashs de votre ordinateur. Ces pratiques ne sont pas "magiques", je ne promets pas un gain incroyable niveau performances, le plus efficace restant d'acheter des composants plus performants et augmenter la RAM.
 
 *Bien que le guide soit sans réel risque, lire tout en entier avant de faire quoi que ce soit.*
 
-## 📖 Sommaire
+## 📖Sommaire
+
 - [Pratiques rapides](#pratiques-rapides)
 - [Pratiques avancées](#pratiques-avancées)
 - [Conseils](#conseils)
@@ -14,23 +15,26 @@ Voici des manipulations simples et saines pour un ordinateur fonctionnant sous W
 - [Sources](#sources)
 
 ## 🧹Pratiques rapides
+
 Dans l'ordre, à répéter 1 fois par mois environ :
 
-* Mettre à jour les drivers de votre carte graphique [Nvidia](https://www.nvidia.fr/Download/index.aspx?lang=fr) ou [AMD](https://www.amd.com/fr/support), utilisez [DDU](https://www.guru3d.com/files-details/display-driver-uninstaller-download.html) pour supprimer les anciens drivers proprement
+- Mettre à jour les drivers de votre carte graphique [Nvidia](https://www.nvidia.fr/Download/index.aspx?lang=fr) ou [AMD](https://www.amd.com/fr/support), utilisez [DDU](https://www.guru3d.com/files-details/display-driver-uninstaller-download.html) pour supprimer les anciens drivers proprement
+
 > [!IMPORTANT]
 > DDU peut corriger les crashs et pertes de performance sur vos jeux
 
-* Mettre Windows à jour via Windows Update dans les paramètres
+- Mettre Windows à jour via Windows Update dans les paramètres
 
 Une fois que tout est bien à jour et que l'ordinateur a été redémarré :
 
-* Réparer les fichiers système : `sfc /scannow`
-* Réparer l'image de Windows : `Dism /Online /Cleanup-Image /RestoreHealth`
-* En cas d'icônes blanches sur le bureau, réinitialiser le cache des icônes avec mon [script](https://github.com/seguinleo/ResetIconCache)
-* En cas d'erreur pendant une mise à jour, supprimer les fichiers de Windows Update (`C:/Windows/SoftwareDistribution/Download/` - Supprimer tous les dossiers à l'intérieur)
-* Nettoyer tous les lecteurs (Taper "Nettoyage de disque" dans la barre de recherche Windows - Exécuter en tant qu'administrateur)
+- Réparer les fichiers système : `sfc /scannow`
+- Réparer l'image de Windows : `Dism /Online /Cleanup-Image /RestoreHealth`
+- En cas d'icônes blanches sur le bureau, réinitialiser le cache des icônes avec mon [script](https://github.com/seguinleo/ResetIconCache)
+- En cas d'erreur pendant une mise à jour, supprimer les fichiers de Windows Update (`C:/Windows/SoftwareDistribution/Download/` - Supprimer tous les dossiers à l'intérieur)
+- Nettoyer tous les lecteurs (Taper "Nettoyage de disque" dans la barre de recherche Windows - Exécuter en tant qu'administrateur)
 
 ## 🔧Pratiques avancées
+
 Avant toute chose, je recommande l'édition Pro de Windows pour plus de contrôle sur le système
 
 Mettre le BIOS et les drivers à jour **via le site de votre carte mère**. Éviter CCleaner, Driverscloud ou DriverBooster, ces utilitaires peuvent installer des drivers obsolètes ou incompatibles avec vos composants. Dans le BIOS, vérifier que le mode UEFI est activé et pour un usage gaming, vérifier aussi que le profil ram XMP est activé
@@ -64,45 +68,52 @@ Remettre l'ancien menu du clic droit de Windows 10 sur Windows 11 : `REG ADD "HK
 
 Pour une utilisation gaming, Microsoft recommande de désactiver l'intégrité de la mémoire (réduit donc un peu la sécurité) et la plateforme de machines virtuelles [ici](https://www.microsoft.com/en-us/windows/learning-center/optimize-pc-for-gaming-performance)
 
-**Panneau Nvidia/AMD :**
-* Sélectionnez la plus grande fréquence de rafraîchissement possible (144Hz, 180Hz...)
-* Activez G-SYNC/FreeSync + V-SYNC + bloquer les IPS à 3 en dessous de la fréquence de rafraîchissement de l'écran pour éviter les déchirures d'images (écran 144Hz → bloquer à 141FPS)
-* Spécifique Nvidia : choisir mode de faible latence sur "Activé"
-* Spécifique AMD : il est préférable de bloquer les FPS via [RTSS](https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html) plutôt que via le panneau AMD pour une latence plus basse
+### Panneau Nvidia/AMD
+
+- Sélectionnez la plus grande fréquence de rafraîchissement possible (144Hz, 180Hz...)
+- Activez G-SYNC/FreeSync + V-SYNC + bloquer les IPS à 3 en dessous de la fréquence de rafraîchissement de l'écran pour éviter les déchirures d'images (écran 144Hz → bloquer à 141FPS)
+- Spécifique Nvidia
+  - Choisir mode de faible latence sur "Activé"
+  - Laisser le mode de gestion d'alimentation sur "Normal"
+  - Depuis 2026, le panneau est disponible dans la [Nvidia app](https://www.nvidia.com/en-us/software/nvidia-app/)
+- Spécifique AMD
+  - Il est préférable de bloquer les FPS via [RTSS](https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html) plutôt que via le panneau AMD pour une latence plus basse
 
 > [!IMPORTANT]
 > Si la V-SYNC est activée dans le panneau Nvidia/AMD, il faut la désactiver dans les paramètres de tous les jeux pour éviter des conflits
-
-> [!NOTE]
-> Pour les jeux qui permettent de bloquer les FPS, il est préférable de le faire dans les paramètres du jeu plutôt que dans le panneau Nvidia/RTSS pour une latence plus basse
 
 Utilisez [MPO-GPU-FIX](https://github.com/RedDot-3ND7355/MPO-GPU-FIX) pour désactiver le MPO (Multi-Plane Overlay) qui peut causer des problèmes de performances et de stabilité dans les jeux
 
 Pour aller plus loin et pour un usage gaming uniquement, vous pouvez penser à overclocker/undervolter votre GPU, mais renseignez-vous et soyez sûr de ce que vous faites. Personnellement j'utilise [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) et [Kombustor](https://msikombustor.com/) pour tester la stabilité de mon système. Je considère qu'un GPU semble stable si sa température ne dépasse pas 85°C et que Kombustor ne détecte **aucun** artefact en au moins 10 minutes
 
 ## 💡Conseils
-* Réinstaller Windows avant d'appliquer ces manipulations pour avoir une base saine :
-  * avec une clé USB pour une réinstallation complète du système (faire une sauvegarde avant)
-  * ou via [un fichier ISO](https://www.microsoft.com/fr-fr/software-download/) pour garder tous ses documents/paramètres
+
+Réinstaller Windows avant d'appliquer ces manipulations pour avoir une base saine :
+
+- avec une clé USB pour une réinstallation complète du système (faire une sauvegarde avant)
+- ou via [un fichier ISO](https://www.microsoft.com/fr-fr/software-download/) pour garder tous ses documents/paramètres
 
 > [!NOTE]
 > La réinstallation est très efficace pour corriger les bugs/crashs. Une fois finie, ne pas se connecter à son compte Microsoft, créer un compte local pour limiter la collecte de données
 
-* Utilisez l'antivirus de Windows qui fait très bien son travail. Éviter Avast, Bitdefender...
-* Toujours garder Windows et ses programmes à jour pour des raisons de sécurité et de stabilité, surtout le navigateur
-* Préférez [Firefox](https://www.firefox.com/en-US/) à Chrome/Edge pour des raisons de vie privée, configurer le pour bloquer les cookies tiers et définir HTTPS uniquement. Installez l'extension [uBlock Origin](https://ublockorigin.com/) (avec [ce filtre supplémentaire](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt)) pour le blocage des publicités et pisteurs. Évitez tout autre adblock et essayez de limiter le nombre d'extensions installées. Ne jamais enregistrer vos mots de passe dans le navigateur, utilisez un gestionnaire comme [Bitwarden](https://bitwarden.com/fr-fr/)
-* Utilisez un [DNS](https://www.privacyguides.org/en/dns/) personnalisé comme Mullvad ou Quad9 (DoH, dans les paramètres Windows) plutôt que celui de votre fournisseur local
-* Si vous avez **vraiment** besoin d'un VPN, utilisez [ProtonVPN](https://protonvpn.com/fr) ou [Mullvad](https://mullvad.net/fr), évitez NordVPN et CyberGhost
-* Activez BitLocker sur votre PC portable pour chiffrer les données du lecteur et sécuriser vos fichiers (Clic droit sur un lecteur - Activer BitLocker)
+- Utilisez l'antivirus de Windows qui fait très bien son travail. Évitez les antivirus tiers.
+- Toujours garder Windows et ses programmes à jour pour des raisons de sécurité et de stabilité, surtout le navigateur
+- Préférez [Firefox](https://www.firefox.com/en-US/) à Chrome/Edge pour des raisons de vie privée, configurer le pour bloquer les cookies tiers et définir HTTPS uniquement. Installez l'extension [uBlock Origin](https://ublockorigin.com/) (avec [ce filtre supplémentaire](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt)) pour le blocage des publicités et pisteurs. Évitez tout autre adblock et essayez de limiter le nombre d'extensions installées. Ne jamais enregistrer vos mots de passe dans le navigateur, utilisez un gestionnaire comme [Bitwarden](https://bitwarden.com/fr-fr/)
+- Utilisez un [DNS](https://www.privacyguides.org/en/dns/) personnalisé comme Mullvad ou Quad9 (DoH, dans les paramètres Windows) plutôt que celui de votre fournisseur local
+- Si vous avez **vraiment** besoin d'un VPN, utilisez [ProtonVPN](https://protonvpn.com/fr) ou [Mullvad](https://mullvad.net/fr), évitez NordVPN et CyberGhost, les VPN gratuits peuvent voler les données des utilisateurs
+- Activez BitLocker sur votre PC portable pour chiffrer les données du lecteur et sécuriser vos fichiers (Clic droit sur un lecteur - Activer BitLocker)
+
 > [!WARNING]
 > Veuillez à bien sauvegarder la clé de récupération BitLocker dans un cloud ou un disque externe !
 
-* Redémarrez votre PC de temps en temps si vous constatez des instabilités ou des fuites de mémoire
-* Activez l'éclairage nocturne de Windows pour éviter la fatigue oculaire
-* Utilisez [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) pour contrôler tous vos composants RGB via un seul logiciel. Ainsi, on évite les logiciels comme Razer Synapse, ASUS Aura ou MSI Dragon Center qui consomment des ressources en arrière-plan
+- Redémarrez votre PC de temps en temps si vous constatez des instabilités ou des fuites de mémoire
+- Activez l'éclairage nocturne de Windows pour éviter la fatigue oculaire
+- Utilisez [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) pour contrôler tous vos composants RGB via un seul logiciel. Ainsi, on évite les logiciels comme Razer Synapse, ASUS Aura ou MSI Dragon Center qui consomment des ressources en arrière-plan
 
 ## 🎉Conclusion
+
 Voilà ! Votre PC devrait être plus rapide et performant. Je déconseille d'autres manipulations qui pourraient endommager le système (ISO custom, scripts PowerShell, optimiseur de connexion Internet... ce sont très souvent des arnaques ou du placebo).
 
 ## 🔗Sources
+
 [Microsoft](https://learn.microsoft.com/en-us/windows/security/) | [Discord Entraide Informatique](https://discord.gg/WMsR7dT) | [Piwi](https://www.youtube.com/c/Piwi_youtube) | [BlurBusters](https://blurbusters.com/) | [PrivacyGuides](https://privacyguides.org/)

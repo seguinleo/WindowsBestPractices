@@ -2,11 +2,12 @@
 
 [en](/README.md), [fr](/README-FR.md)
 
-Here are simple and safe tweaks for a computer running Windows 10 or 11. They help make your PC more responsive for office work and gaming. This guide is effective for fixing bugs, slowdowns, and crashes. These practices are not "magic"—I don't promise incredible performance gains; the best way to improve performance is still to buy more powerful components.
+Here are simple and safe tweaks for a computer running Windows 10 or 11. They help make your PC more responsive for office work and gaming. This guide is effective for fixing bugs, slowdowns, and crashes. These practices are not "magic"—I don't promise incredible performance gains; the best way to improve performance remains to buy higher-performance components and increase the RAM.
 
 *Although this guide is low-risk, read everything carefully before doing anything.*
 
-## 📖 Table of Contents
+## 📖Table of Contents
+
 - [Quick Practices](#quick-practices)
 - [Advanced Practices](#advanced-practices)
 - [Tips](#tips)
@@ -14,23 +15,26 @@ Here are simple and safe tweaks for a computer running Windows 10 or 11. They he
 - [Sources](#sources)
 
 ## 🧹Quick Practices
+
 In order, repeat about once a month:
 
-* Update your graphics drivers from [Nvidia](https://www.nvidia.com/Download/index.aspx) or [AMD](https://www.amd.com/en/support). Use [DDU](https://www.guru3d.com/files-details/display-driver-uninstaller-download.html) to cleanly remove old drivers
+- Update your graphics drivers from [Nvidia](https://www.nvidia.com/Download/index.aspx) or [AMD](https://www.amd.com/en/support). Use [DDU](https://www.guru3d.com/files-details/display-driver-uninstaller-download.html) to cleanly remove old drivers
+
 > [!IMPORTANT]
 > Using DDU can fix crashes and performance drops in games
 
-* Update Windows via Windows Update in Settings
+- Update Windows via Windows Update in Settings
 
 Once everything is up to date and the computer has been restarted:
 
-* Repair system files: `sfc /scannow`
-* Repair Windows image: `Dism /Online /Cleanup-Image /RestoreHealth`
-* If you have white icons on the desktop, reset the icon cache with my [script](https://github.com/seguinleo/ResetIconCache)
-* If you encounter errors during an update, delete Windows Update files (`C:\Windows\SoftwareDistribution\Download\` - Delete all folders inside)
-* Clean all drives (Type "Disk Cleanup" in the Windows search bar - Run as administrator)
+- Repair system files: `sfc /scannow`
+- Repair Windows image: `Dism /Online /Cleanup-Image /RestoreHealth`
+- If you have white icons on the desktop, reset the icon cache with my [script](https://github.com/seguinleo/ResetIconCache)
+- If you encounter errors during an update, delete the Windows Update files (`C:\Windows\SoftwareDistribution\Download\` - Delete all folders inside)
+- Clean all drives (Type "Disk Cleanup" in the Windows search bar - Run as administrator)
 
 ## 🔧Advanced Practices
+
 First, I recommend Windows Pro edition for more system control
 
 Update your BIOS and drivers **via your motherboard's website**. Avoid CCleaner, DriverCloud, or DriverBooster—these utilities can install outdated or incompatible drivers. In the BIOS, ensure UEFI mode is enabled and, for gaming, that the RAM XMP profile is activated
@@ -62,47 +66,54 @@ Disable Bing results in Windows Search: `REG ADD "HKEY_CURRENT_USER\SOFTWARE\Pol
 
 Restore the old Windows 10 right-click menu on Windows 11: `REG ADD "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve` - Restart PC | To undo: `REG DELETE "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}" /f`
 
-For gaming, Microsoft recommends disabling memory integrity (slightly reduces security) and virtual machine platform [here](https://www.microsoft.com/en-us/windows/learning-center/optimize-pc-for-gaming-performance)
+For gaming, Microsoft recommends disabling memory integrity (slightly reduces security) and virtual machine platform [in this article](https://www.microsoft.com/en-us/windows/learning-center/optimize-pc-for-gaming-performance)
 
-**Nvidia/AMD Control Panel:**
-* Select the highest possible refresh rate (144Hz, 180Hz, etc.)
-* Enable G-SYNC/FreeSync + V-SYNC + cap FPS at 3 below your monitor's refresh rate to avoid screen tearing (144Hz screen → cap at 141FPS)
-* Nvidia specific: Set low latency mode to "On"
-* AMD specific: It's better to cap FPS via [RTSS](https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html) rather than the AMD panel for lower latency
+### Nvidia/AMD Control Panel
+
+- Select the highest possible refresh rate (144Hz, 180Hz, etc.)
+- Enable G-SYNC/FreeSync + V-SYNC + cap FPS at 3 below your monitor's refresh rate to avoid screen tearing (144Hz screen → cap at 141FPS)
+- Nvidia specific
+  - Set Low latency mode to "On"
+  - Keep Power management mode to "Normal"
+  - Since 2026, the panel is available in the [Nvidia app](https://www.nvidia.com/en-us/software/nvidia-app/)
+- AMD specific
+  - It's better to cap FPS via [RTSS](https://www.guru3d.com/files-details/rtss-rivatuner-statistics-server-download.html) rather than the AMD panel for lower latency
 
 > [!IMPORTANT]
 > If V-SYNC is enabled in the Nvidia/AMD panel, disable it in all game settings to avoid conflicts
-
-> [!NOTE]
-> For games that allow FPS capping, it's best to do it in the game settings rather than the Nvidia/RTSS panel for lower latency
 
 Use [MPO-GPU-FIX](https://github.com/RedDot-3ND7355/MPO-GPU-FIX) to disable MPO (Multi-Plane Overlay), which can cause performance and stability issues in games
 
 For advanced gaming use, you may consider overclocking/undervolting your GPU, but do your research and know what you're doing. Personally, I use [MSI Afterburner](https://www.msi.com/Landing/afterburner/graphics-cards) and [Kombustor](https://msikombustor.com/) to test system stability. I consider a GPU stable if its temperature does not exceed 85°C and Kombustor detects **no** artifacts for at least 10 minutes
 
 ## 💡Tips
-* Reinstall Windows before applying these tweaks for a clean base:
-  * Using a USB drive for a full system reinstall (backup first)
-  * Or via [ISO file](https://www.microsoft.com/en-us/software-download/) to keep your documents/settings
+
+Reinstall Windows before applying these tweaks for a clean base:
+
+- Using a USB drive for a full system reinstall (backup first)
+- Or via [ISO file](https://www.microsoft.com/en-us/software-download/) to keep your documents/settings
 
 > [!NOTE]
 > Reinstallation is very effective for fixing bugs/crashes. Once done, do not sign in with your Microsoft account; create a local account to limit data collection
 
-* Use Windows Defender, which does a great job. Avoid Avast, Bitdefender, etc.
-* Always keep Windows and your programs up to date for security and stability, especially your browser
-* Prefer [Firefox](https://www.firefox.com/en-US/) over Chrome/Edge for privacy. Configure it to block third-party cookies and set HTTPS only. Install the [uBlock Origin](https://ublockorigin.com/) extension (with [this additional filter](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt)) for ad and tracker blocking. Avoid other ad blockers and limit the number of extensions. Never save passwords in your browser; use a manager like [Bitwarden](https://bitwarden.com/)
-* Use a [custom DNS](https://www.privacyguides.org/en/dns/) like Mullvad or Quad9 instead of your ISP's
-* If you **really** need a VPN, use [ProtonVPN](https://protonvpn.com/) or [Mullvad](https://mullvad.net/), don't trust NordVPN or CyberGhost
-* Enable BitLocker on your laptop to encrypt your drive and secure your files (Right-click a drive - Turn on BitLocker)
+- Use Windows Defender, which does a great job. Avoid third-party antivirus software.
+- Always keep Windows and your programs up to date for security and stability, especially your browser
+- Prefer [Firefox](https://www.firefox.com/en-US/) over Chrome/Edge for privacy. Configure it to block third-party cookies and set HTTPS only. Install the [uBlock Origin](https://ublockorigin.com/) extension (with [this additional filter](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/LegitimateURLShortener.txt)) for ad and tracker blocking. Avoid other ad blockers and limit the number of extensions. Never save passwords in your browser; use a manager like [Bitwarden](https://bitwarden.com/)
+- Use a [custom DNS](https://www.privacyguides.org/en/dns/) like Mullvad or Quad9 instead of your ISP's
+- If you **really** need a VPN, use [ProtonVPN](https://protonvpn.com/) or [Mullvad](https://mullvad.net/), don't trust NordVPN or CyberGhost, free VPNs can steal user data
+- Enable BitLocker on your laptop to encrypt your drive and secure your files (Right-click a drive - Turn on BitLocker)
+
 > [!WARNING]
 > Make sure to back up your BitLocker recovery key to a cloud or external drive!
 
-* Restart your PC occasionally if you experience instability or memory leaks
-* Enable Windows Night Light to reduce eye strain
-* Use [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) to control all your RGB components with a single software. This avoids resource-heavy software like Razer Synapse, ASUS Aura, or MSI Dragon Center
+- Restart your PC occasionally if you experience instability or memory leaks
+- Enable Windows Night Light to reduce eye strain
+- Use [OpenRGB](https://gitlab.com/CalcProgrammer1/OpenRGB) to control all your RGB components with a single software. This avoids resource-heavy software like Razer Synapse, ASUS Aura, or MSI Dragon Center
 
 ## 🎉Conclusion
+
 That's it! Your PC should now be faster and more performant. I advise against other tweaks that could damage your system (custom ISOs, PowerShell scripts, internet connection optimizers—these are often scams or placebo).
 
 ## 🔗Sources
+
 [Microsoft](https://learn.microsoft.com/en-us/windows/security/) | [Discord Entraide Informatique](https://discord.gg/WMsR7dT) | [Piwi](https://www.youtube.com/c/Piwi_youtube) | [BlurBusters](https://blurbusters.com/) | [PrivacyGuides](https://privacyguides.org/)
