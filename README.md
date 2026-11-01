@@ -18,17 +18,13 @@ Here are simple and safe tweaks for a computer running Windows 10 or 11. They he
 
 In order, repeat about once a month:
 
-- Update your graphics drivers from [Nvidia](https://www.nvidia.com/Download/index.aspx) or [AMD](https://www.amd.com/en/support). Use [DDU](https://www.guru3d.com/files-details/display-driver-uninstaller-download.html) to cleanly remove old drivers
-
-> [!IMPORTANT]
-> Using DDU can fix crashes and performance drops in games
-
+- Update your graphics drivers from [Nvidia](https://www.nvidia.com/Download/index.aspx) or [AMD](https://www.amd.com/en/support). If you bought a new GPU, use [DDU](https://www.guru3d.com/files-details/display-driver-uninstaller-download.html) to cleanly remove old drivers. **Using DDU can fix crashes and performance drops in games**
 - Update Windows via Windows Update in Settings
 
 Once everything is up to date and the computer has been restarted:
 
-- Repair system files: `sfc /scannow`
 - Repair Windows image: `Dism /Online /Cleanup-Image /RestoreHealth`
+- Repair system files: `sfc /scannow`
 - If you have white icons on the desktop, reset the icon cache with my [script](https://github.com/seguinleo/ResetIconCache)
 - If you encounter errors during an update, delete the Windows Update files (`C:\Windows\SoftwareDistribution\Download\` - Delete all folders inside)
 - Clean all drives (Type "Disk Cleanup" in the Windows search bar - Run as administrator)
@@ -44,8 +40,6 @@ Install only essential programs to avoid system slowdowns and bugs
 Disable as many startup programs as possible (`Ctrl` + `Shift` + `Esc` - Startup)
 
 Disable Widgets on Windows 11: `REG ADD "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Dsh" /v AllowNewsAndInterests /t REG_DWORD /d 00000000 /f` - Restart PC | To undo: `REG DELETE "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Dsh" /v AllowNewsAndInterests /f`
-
-Disable Windows Copilot: `REG ADD "HKEY_CURRENT_USER\Software\Policies\Microsoft\Windows\WindowsCopilot" /v TurnOffWindowsCopilot /t REG_DWORD /d 1 /f`
 
 Disable the SysMain service, which can cause SSD performance issues: `sc stop "SysMain" & sc config "SysMain" start=disabled` | To undo: `sc config "SysMain" start=auto & sc start "SysMain"`
 
@@ -112,7 +106,7 @@ Reinstall Windows before applying these tweaks for a clean base:
 
 ## 🎉Conclusion
 
-That's it! Your PC should now be faster and more performant. I advise against other tweaks that could damage your system (custom ISOs, PowerShell scripts, internet connection optimizers—these are often scams or placebo).
+That's it! I advise against other tweaks that could damage your system (custom ISOs, PowerShell scripts, internet connection optimizers—these are often scams or placebo).
 
 ## 🔗Sources
 
