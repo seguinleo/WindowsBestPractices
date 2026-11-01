@@ -1,7 +1,5 @@
 # WindowsBestPractices
 
-[en](/README.md), [fr](/README-FR.md)
-
 Here are simple and safe tweaks for a computer running Windows 10 or 11. They help make your PC more responsive for office work and gaming. This guide is effective for fixing bugs, slowdowns, and crashes. These practices are not "magic"—I don't promise incredible performance gains; the best way to improve performance remains to buy higher-performance components and increase the RAM.
 
 *Although this guide is low-risk, read everything carefully before doing anything.*
